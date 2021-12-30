@@ -22,7 +22,7 @@
 
             </div>
             <div class="user-wrapper">
-                <img src="_web/_assets/YuriDomingos.jpg" alt="Error, picture not found " width="40px" height="40px" />
+                <img src="_assets/YuriDomingos.jpg" alt="Error, picture not found " width="40px" height="40px" />
                 <div>
 
                     <h4> Yuri Domingos</h4>

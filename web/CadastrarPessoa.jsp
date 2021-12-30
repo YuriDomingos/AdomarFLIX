@@ -50,7 +50,7 @@
                 <li> <a href="../../index.jsp" class="active"> <span> </span class="las la-igloo">
                         <span> Dashboard </span> </a>
                 </li>
-                <li> <a href="../_webpage/pessoas.jsp"> <span> </span class="las la-igloo">
+                <li> <a href="pessoas.jsp"> <span> </span class="las la-igloo">
                     <span> Pessoas </span> </a>
                 </li>
                 <li> <a href=""> <span> </span class="las la-igloo">
@@ -109,24 +109,25 @@
               
                 <div class="card-body">
                     <h3 class="title">Cadastrar Pessoa </h3>
-                    <form action="ActorServlet" method="post">
+                    
+                    <form action="CadastroPessoaServlet" method="post">
                         <div class="input-group">
-                            <input class="input--style-2" type="text" id="PrimeiroNome" required="true" placeholder="Primeiro Nome" name="name">
+                            <input class="input--style-2" type="text" required="true" placeholder="Primeiro Nome" name="Pnome">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-2" type="text" placeholder="Último Nome" name="name">
+                            <input class="input--style-2" type="text" placeholder="Último Nome" name="Unome">
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2 js-datepicker" type="text" placeholder="Data de nascimento" name="birthday">
+                                    <input class="input--style-2 js-datepicker" type="text" name="Dnascimento" placeholder="Data de nascimento" name="birthday">
                                     <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="gender">
+                                        <select name="sexo">
                                             
                                             <%
                                                 SexoDAO sexo_lista = new SexoDAO();
@@ -150,13 +151,13 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2" type="text" placeholder="Nº Bilhete" name="name">
+                                    <input class="input--style-2" type="text" placeholder="Nº Bilhete" name="Nbilhete">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="gender">
+                                        <select name="estado_civil">
                                             
                                             <%
                                                 EstadoCivilDAO estado_civil = new EstadoCivilDAO();
@@ -178,13 +179,13 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2" type="email" placeholder="Email" name="name">
+                                    <input class="input--style-2" type="email" placeholder="Email" name="email">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <input class="input--style-2" type="number" placeholder="+244 " name="name">
+                                        <input class="input--style-2" type="number" placeholder="+244 " name="numero">
                                         <div class="select-dropdown"></div>
                                     </div>
                                 </div>
@@ -193,7 +194,7 @@
                         
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="class">
+                                <select name="Morada">
                                     <option disabled="disabled" selected="selected">Morada</option>
                                     <%
                                         MoradaDAO moradas = new MoradaDAO();

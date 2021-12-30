@@ -24,7 +24,7 @@ public class PessoaDAO {
     public boolean SalvarPessoa(PessoaModelo modelo)
     {
         
-        String query_insert = "";
+        String query_insert = "INSERT INTO public.pessoa VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
         
         try{
             
@@ -38,7 +38,9 @@ public class PessoaDAO {
                ps.setString(6, modelo.getEmail());
                ps.setInt(7, modelo.getTelefone());
                ps.setInt(8, modelo.getFk_morada());
+               ps.setDate(9, modelo.getData_nasc());
                ps.execute();
+               System.out.println("Inserido com sucesso");
                ps.close();
                con.close();
         
@@ -46,7 +48,7 @@ public class PessoaDAO {
         }
         catch(SQLException ex)
         {
-            System.out.println(" Erro "+ex.toString());   
+            System.out.println(" Erro na insercao  "+ex.toString());   
         }
         return false;
     }
