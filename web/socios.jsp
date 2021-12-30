@@ -56,7 +56,7 @@
                 <li> <a href="../filmes/filmes.jsp"> <span> </span class="las la-igloo">
                         <span> Filmes </span> </a>
                 </li>
-                <li> <a href=""> <span> </span class="las la-igloo">
+                <li> <a href="actor.jsp"> <span> </span class="las la-igloo">
                         <span> Actores </span> </a>
                 </li>
                 <li> <a href=""> <span> </span class="las la-igloo">
@@ -112,10 +112,10 @@
                                         <td><%= socio.getData_inicio() %> </td>
                                        
                                         <td>
-                                         <a class="icon1" > <img  src="_assets/editar.png"  class="icon" alt="Error while was loading"> </a> 
+                                         <a class="icon1" > <img  src="_assets/editar.png"  class="icon" style="width: 20px; height: 20px;" alt="Error while was loading"> </a> 
                                         </td>
                                         <td> 
-                                            <a class="icon2"> <img src="_assets/eliminar.png" alt="Error While was loading"> </a> 
+                                            <a class="icon2"> <img src="_assets/eliminar.png" alt="Error While was loading" style="width: 20px; height: 20px;"> </a> 
                                         </td>                
                                     </tr>
                                     

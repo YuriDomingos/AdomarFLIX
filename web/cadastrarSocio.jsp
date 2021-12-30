@@ -54,7 +54,7 @@
                 <li> <a href="../filmes/filmes.jsp"> <span> </span class="las la-igloo">
                         <span> Filmes </span> </a>
                 </li>
-                <li> <a href=""> <span> </span class="las la-igloo">
+                <li> <a href="actor.jsp"> <span> </span class="las la-igloo">
                         <span> Actores </span> </a>
                 </li>
                 <li> <a href="socios.jsp"> <span> </span class="las la-igloo">
@@ -76,7 +76,7 @@
         
           <div class="primer-card-header">
                            
-            <button onclick="window.location.href='socio.jsp'"> Ver lista de Socios <span class="las la-arrow-right"></span> </button>
+            <button onclick="window.location.href='actor.jsp'"> Ver lista de actores <span class="las la-arrow-right"></span> </button>
                          
           </div>
           
@@ -87,12 +87,12 @@
                 <div class="card-body">
                     <h3 class="title">Cadastrar Socio  </h3>
                     
-                    <form action="CadastroPessoaServlet" method="post">
+                    <form action="CadastrarSocio" method="post">
                   
                               
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="Morada">
+                                <select name="fk_pessoa" method="post">
                                     
                                     <option disabled="disabled" selected="selected">Selecione uma pessoa </option>
                                     <%

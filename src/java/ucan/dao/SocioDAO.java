@@ -24,6 +24,29 @@ public class SocioDAO
 {
     
     
+    
+    public static boolean cadastrarSocio(int fk_pessoa)
+    {
+      String inserir = "INSERT INTO socio VALUES (default,?)";
+      
+      try
+      {
+          Connection con = Conexao.abrirConexao();
+          PreparedStatement ps = con.prepareStatement(inserir);
+          ps.setInt(1, fk_pessoa);
+          ps.execute();
+          ps.close();
+          return true;
+      }
+      catch(SQLException ex)
+      {
+          System.out.println("Erro ao cadastrar o socio "+ex.toString());
+      }
+      
+      return false;
+        
+    }
+    
     public ArrayList<SocioModelo> listar_socio()
     {
         
@@ -31,8 +54,7 @@ public class SocioDAO
         
         String query = "select p.pk_pessoa, p.primeiro_nome, p.ultimo_nome, date(s.data_inicio)"
                 
-                                           + " from pessoa p INNER JOIN socio s ON (p.pk_pessoa = s.fk_pessoa);";
-        
+                                           + " from pessoa p INNER JOIN socio s ON (p.pk_pessoa = s.fk_pessoa);";  
         try
         {
             Connection con = Conexao.abrirConexao();
