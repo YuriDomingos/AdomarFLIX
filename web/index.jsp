@@ -48,7 +48,7 @@ and open the template in the editor.
                 <li> <a href=""> <span> </span class="las la-igloo">
                         <span> Actores </span> </a>
                 </li>
-                <li> <a href=""> <span> </span class="las la-igloo">
+                <li> <a href="socios.jsp"> <span> </span class="las la-igloo">
                         <span> Sócios </span> </a>
                 </li>
                 <li> <a href=""> <span> </span class="las la-igloo">
