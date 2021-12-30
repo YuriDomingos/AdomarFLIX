@@ -4,6 +4,8 @@
     Author     : yuri
 --%>
 
+<%@page import="ucan.modelo.ActorModelo"%>
+<%@page import="ucan.dao.ActorDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="ucan.modelo.SocioModelo"%>
 <%@page import="ucan.dao.SocioDAO"%>
@@ -95,19 +97,21 @@
                                 </thead>
                                 
                                 <%
-                                    SocioDAO socioDAO = new SocioDAO();
-                                    List<SocioModelo> socios = socioDAO.listar_socio();
+                                    ActorDAO actorDAO = new ActorDAO();
+                               
                                     
-                                    for ( SocioModelo socio : socios)
+                                    List<ActorModelo> actores = actorDAO.listar_Atores();
+                                    
+                                    for ( ActorModelo actor : actores)
                                     {
                                  %>
   
                                 <tbody>
                                     <tr>
-                                        <td><%=socio.getPk_socio()  %> </td>
-                                        <td><%=socio.getPrimeiro_nome() %> </td>
-                                        <td><%= socio.getUltimo_nome()%> </td>
-                                        <td><%= socio.getData_inicio() %> </td>
+                                        <td><%= actor.getPk_actor() %> </td>
+                                        <td><%= actor.getPrimeiro_nome() %> </td>
+                                        <td><%= actor.getUltimo_nome()%> </td>
+                                        <td><%= actor.getData_inicio() %> </td>
                                        
                                         <td>
                                          <a class="icon1" > <img  src="_assets/editar.png"  class="icon" style="width: 20px; height: 20px;" alt="Error while was loading"> </a> 
