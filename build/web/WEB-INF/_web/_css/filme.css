@@ -1,0 +1,122 @@
+/* Para configurar   */
+
+.card-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card-header h3 {
+    visibility: hidden;
+    color: #8390A2;
+}
+.card-header button {
+
+    background: var(--main-color);
+    border-radius: 10px;
+    color: #fff;
+    font-size: .8rem;
+    padding: .5rem 1rem;
+    border: 1px solid var(--main-color);
+}
+
+.card-header button:hover{
+    
+    cursor: pointer;
+}
+
+
+.dishes .box-container {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap : 1.5rem;
+}
+
+
+ .box 
+ {
+
+ 
+    background: #fff;
+    border-radius: .5rem;
+    border : .1rem solid rgba(0,0,0,0,.2);
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+ .box .fa-heart, 
+ .box .fa-eye {
+
+    position: absolute;
+    top : 1.5rem;
+    background : #eee;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    font-size: 2rem;
+    line-height: 5rem;
+    color: var(--black);
+}
+
+.dishes .box-container .box .fa-heart:hover, 
+.dishes .box-container .box .fa-eye:hover{
+    background: var(--principal);
+    color: #fff;
+
+}
+.dishes .box-container .box .fa-heart {
+
+    right: -15rem;
+}
+
+.dishes .box-container .box .fa-eye{
+
+    left: -15rem;
+}
+
+.dishes .box-container .box:hover .fa-heart {
+
+    right: 1.5rem;
+}
+
+.dishes .box-container .box:hover .fa-eye{
+
+    left: 1.5rem;
+}
+
+
+.dishes .box-container .box img {
+    height: 15rem;
+    margin: 1rem 0;
+}
+
+.dishes .box-container .box h3 {
+
+    color: var(--black);
+    font-size: 2.5rem;
+}
+
+.dishes .box-container .box .stars{
+
+    padding : 1rem 0;
+}
+
+.dishes .box-container .box .stars i {
+
+    font-size: 1.7rem;
+    color :var(--principal)
+}
+
+
+.dishes .box-container .box span {
+
+    color : var(--sub-color);
+    font-weight: bolder;
+    margin-right: 1rem;
+    font-size: 2.5rem;
+}
