@@ -6,6 +6,7 @@
 package ucan.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -24,7 +25,7 @@ public class PessoaDAO {
     public boolean SalvarPessoa(PessoaModelo modelo)
     {
         
-        String query_insert = "INSERT INTO public.pessoa VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
+        String query_insert = "INSERT INTO public.pessoa VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?::date);";
         
         try{
             
@@ -39,7 +40,7 @@ public class PessoaDAO {
                ps.setInt(7, modelo.getTelefone());
                ps.setInt(8, modelo.getFk_morada());
                ps.setDate(9, modelo.getData_nasc());
-               ps.execute();
+               ps.executeUpdate();
                System.out.println("Inserido com sucesso");
                ps.close();
                con.close();
