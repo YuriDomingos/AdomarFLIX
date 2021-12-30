@@ -7,6 +7,7 @@ package ucan.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -58,7 +59,7 @@ public class ActorServlet extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
-        System.out.println("Entrou agora");
+        
     }
 
     /**
@@ -74,7 +75,18 @@ public class ActorServlet extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
-        System.out.println("Etrou post");
+         String nome = request.getParameter("PrimeiroNome").trim();
+         
+         if ( nome.equals("Yuri"))
+         {
+             System.out.println("Entrou ");
+             RequestDispatcher dis = request.getRequestDispatcher("filmes.jsp");
+             dis.forward(request, response);
+         }
+         else{
+             System.out.println("Não foi possivel carregar");
+         }
+      
     }
 
     /**

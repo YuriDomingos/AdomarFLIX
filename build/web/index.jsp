@@ -12,7 +12,7 @@ and open the template in the editor.
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="_web/_css/index.css" />
+    <link rel="stylesheet" href="_css/index.css" />
     
     <!-- Vamos adicionar um awesome basico  do cdn do texto-->
     <title>Administrador</title>
@@ -33,13 +33,13 @@ and open the template in the editor.
                 <li> <a href="" class="active"> <span> </span class="las la-igloo">
                         <span> Dashboard </span> </a>
                 </li>
-                <li> <a href="_web/_webpage/pessoa/pessoas.jsp"> <span> </span class="las la-igloo">
+                <li> <a href="pessoas.jsp"> <span> </span class="las la-igloo">
                     <span> Pessoas </span> </a>
                 </li>
                 <li> <a href=""> <span> </span class="las la-igloo">
                         <span> Funcionarios </span> </a>
                 </li>
-                <li> <a href="_web/_webpage/filmes/filmes.jsp"> <span> </span class="las la-igloo">
+                <li> <a href="filmes.jsp"> <span> </span class="las la-igloo">
                         <span> Filmes </span> </a>
                 </li>
                   <li> <a href=""> <span> </span class="las la-igloo">
@@ -78,7 +78,7 @@ and open the template in the editor.
 
             </div>
             <div class="user-wrapper">
-                <img src="_web/_assets/YuriDomingos.jpg" alt="Error, picture not found " width="40px" height="40px" />
+                <img src="_assets/YuriDomingos.jpg" alt="Error, picture not found " width="40px" height="40px" />
                 <div>
 
                     <h4> Yuri Domingos</h4>
@@ -96,7 +96,7 @@ and open the template in the editor.
                     <div>
                         <h3> Filmes explosivos </h2>
                         <span> Drenalina gerada com ação </span>
-                        <video class="apresentation-movies" autoplay=""  muted="" loop="" src="_web/_assets/MOVIE.mp4"> </video>
+                        <video class="apresentation-movies" autoplay=""  muted="" loop="" src="_assets/MOVIE.mp4"> </video>
                     </div>
                     <div>
                         <span class="las la-user"> </span>
@@ -106,7 +106,7 @@ and open the template in the editor.
                     <div>
                         <h3> Drama e terror </h3>
                         <span> estórias arrepiantes </span>
-                        <video class="apresentation-movies" autoplay=""  muted="" loop="" src="_web/_assets/mov2.mp4"> </video>
+                        <video class="apresentation-movies" autoplay=""  muted="" loop="" src="_assets/mov2.mp4"> </video>
                     </div>
                     <div>
                         <span class="las la-user"> </span>
@@ -173,7 +173,7 @@ and open the template in the editor.
 
                         <div class="socio">
                             <div>
-                                <img src="_web/_assets/YuriDomingos.jpg" alt="Error image not found " width="40px" height="40px">
+                                <img src="_assets/YuriDomingos.jpg" alt="Error image not found " width="40px" height="40px">
 
                                 <div>
                                     <H4> Félix Manuel </H4>
@@ -195,7 +195,7 @@ and open the template in the editor.
 
                             <div class="socio">
                                 <div>
-                                    <img src="Y_web/_assets/uriDomingos.jpg" alt="Error image not found " width="40px" height="40px">
+                                    <img src="_assets/uriDomingos.jpg" alt="Error image not found " width="40px" height="40px">
 
                                     <div>
                                         <H4> Félix Manuel </H4>
@@ -218,7 +218,7 @@ and open the template in the editor.
 
                                 <div class="socio">
                                     <div>
-                                        <img src="_web/_assets/YuriDomingos.jpg" alt="Error image not found " width="40px" height="40px">
+                                        <img src="_assets/YuriDomingos.jpg" alt="Error image not found " width="40px" height="40px">
 
                                         <div>
                                             <H4> Félix Manuel </H4>
@@ -241,7 +241,7 @@ and open the template in the editor.
 
                                     <div class="socio">
                                         <div>
-                                            <img src="_web/_assets/YuriDomingos.jpg" alt="Error image not found " width="40px" height="40px">
+                                            <img src="_assets/YuriDomingos.jpg" alt="Error image not found " width="40px" height="40px">
 
                                             <div>
                                                 <H4> Félix Manuel </H4>
