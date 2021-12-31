@@ -51,7 +51,7 @@
                 <li> <a href=""> <span> </span class="las la-igloo">
                         <span> Funcionarios </span> </a>
                 </li>
-                <li> <a href="../filmes/filmes.jsp"> <span> </span class="las la-igloo">
+                <li> <a href="filmes.jsp"> <span> </span class="las la-igloo">
                         <span> Filmes </span> </a>
                 </li>
                 <li> <a href="actor.jsp"> <span> </span class="las la-igloo">
