@@ -49,8 +49,8 @@ public class ActorDAO
         
         ArrayList<ActorModelo> lista_atores = new ArrayList<ActorModelo>();
         
-        String query = "select a.pk_actor, p.primeiro_nome, p.ultimo_nome, date(a.data_inicio) from pessoa p "
-                                                          + "INNER JOIN actor a ON (p.pk_pessoa = a.fk_pessoa);";  
+        String query = "select distinct a.pk_actor, p.primeiro_nome, p.ultimo_nome, date(a.data_inicio) from pessoa p "
+                                                          + "INNER JOIN actor a ON (p.pk_pessoa = a.fk_pessoa) ORDER BY a.pk_actor;";  
         try
         {
             Connection con = Conexao.abrirConexao();

@@ -83,6 +83,8 @@
                             <button onclick="window.location.href='cadastrarAtor.jsp'"> Novo Ator <span class="las la-arrow-right"></span> </button>
                          
                         </div>
+                        
+                        
                         <div class="primer-card-body">
                             <table width="100%">
                                 <thead>
@@ -114,7 +116,7 @@
                                         <td><%= actor.getData_inicio() %> </td>
                                        
                                         <td>
-                                         <a class="icon1" > <img  src="_assets/editar.png"  class="icon" style="width: 20px; height: 20px;" alt="Error while was loading"> </a> 
+                                            <a onsubmit="CadastrarActor" class="icon1" > <img  src="_assets/editar.png"  class="icon" style="width: 20px; height: 20px;" alt="Error while was loading"> </a> 
                                         </td>
                                         <td> 
                                             <a class="icon2"> <img src="_assets/eliminar.png" alt="Error While was loading" style="width: 20px; height: 20px;"> </a> 

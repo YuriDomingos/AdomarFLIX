@@ -87,7 +87,7 @@
                 <div class="card-body">
                     <h3 class="title">Cadastrar Actor  </h3>
                     
-                    <form action="CadastrarSocio" method="post">
+                    <form action="CadastrarActor" method="post">
                   
                               
                         <div class="input-group">
