@@ -35,11 +35,9 @@ public class CadastrarActor extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        System.out.println("Entrou");
-        
-       String pessoa = request.getParameter("fk_pessoa");
-        int  idPessoa = Integer.parseInt(pessoa);      
-        ActorDAO.cadastrarSocio(idPessoa);     
+    
+         
+        ActorDAO.cadastrarActor(Integer.parseInt(request.getParameter("fk_pessoa")));     
         request.getRequestDispatcher("actor.jsp").forward(request, response);
         
       }

@@ -22,7 +22,7 @@ import ucan.utils.Conexao;
  */
 public class ActorDAO 
 {
-     public static boolean cadastrarSocio(int fk_pessoa)
+     public static boolean cadastrarActor(int fk_pessoa)
     {
       String inserir = "INSERT INTO actor VALUES (default,?)";
       

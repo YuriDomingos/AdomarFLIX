@@ -46,11 +46,9 @@ public class CadastrarSocio extends HttpServlet {
             throws ServletException, IOException {
        
         
-        String pessoa = request.getParameter("fk_pessoa");
-        int  idPessoa = Integer.parseInt(pessoa);
-        SocioDAO.cadastrarSocio(idPessoa);  
-        
-        
+         // A ideia é usar menor possível de código 
+         
+        SocioDAO.cadastrarSocio(Integer.parseInt(request.getParameter("fk_pessoa")));  
         request.getRequestDispatcher("socios.jsp").forward(request, response);
         
         
