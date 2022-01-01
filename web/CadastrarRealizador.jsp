@@ -123,7 +123,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="nacionalidade">
+                                        <select name="fk_nacionalidade">
                                          <option disabled="disabled" selected="selected"> Nacionalidade  </option>
                                             <%
                                                 NacionalidadeDAO nacio = new NacionalidadeDAO();

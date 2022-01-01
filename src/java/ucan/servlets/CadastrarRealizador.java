@@ -38,7 +38,7 @@ public class CadastrarRealizador extends HttpServlet {
         
         
      RealizadorDAO.cadastrarRealizador(Integer.parseInt(request.getParameter("fk_pessoa")),  Integer.parseInt(request.getParameter("fk_nacionalidade")));
-      request.getRequestDispatcher("realizador").forward(request, response);
+      request.getRequestDispatcher("realizador.jsp").forward(request, response);
         
     }
 
