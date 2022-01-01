@@ -4,6 +4,10 @@
     Author     : Yuri Domingos
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="ucan.modelo.SocioModelo"%>
+<%@page import="ucan.dao.SocioDAO"%>
+<%@page import="ucan.dao.SocioDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -74,8 +78,8 @@
                 <div class="projects">
                     <div class="primer-card">
                         <div class="primer-card-header">
-                            <h3> Socios Cadastrados  </h3>
-                            <button onclick="window.location.href='cadastrarSocio.jsp'"> Novo Socio <span class="las la-arrow-right"></span> </button>
+                            <h3> Realizadores Cadastrados  </h3>
+                            <button onclick="window.location.href='CadastrarRealizador.jsp'"> Novo Realizador <span class="las la-arrow-right"></span> </button>
                          
                         </div>
                         <div class="primer-card-body">
@@ -83,9 +87,10 @@
                                 <thead>
                                     <tr>
                                         
-                                        <td> Id Socio </td>
+                                        <td> Id Realizador </td>
                                         <td> Primeiro Nome </td>
                                         <td> Ultimo Nome</td>
+                                        <td> Nacionalidade </td>
                                         <td> Data de inicio  </td>       
                                         
                                     </tr>
