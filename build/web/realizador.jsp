@@ -100,17 +100,19 @@
                                 
                                 <%
                                     RealizadorDAO listaRealizadores = new RealizadorDAO();
-                                    
-                                    List<RealizadorModelo> listaReal = listaRealizadores
+                                    List<RealizadorModelo> listaReal = listaRealizadores.listaRealizadores();
+                                    for (RealizadorModelo realizaor : listaReal)
+                                    {
+                                        
                                     
                                  %>
   
                                 <tbody>
                                     <tr>
-                                        <td><%=socio.getPk_socio()  %> </td>
-                                        <td><%=socio.getPrimeiro_nome() %> </td>
-                                        <td><%= socio.getUltimo_nome()%> </td>
-                                        <td><%= socio.getData_inicio() %> </td>
+                                        <td><%=realizaor.getPk_Realizador() %> </td>
+                                        <td><%=realizaor.getFk_pessoa() %> </td>
+                                        <td><%= realizaor.getFk_nacionalidade() %> </td>
+                                        <td><%= realizaor.getData_inico() %> </td>
                                        
                                         <td>
                                          <a class="icon1" > <img  src="_assets/editar.png"  class="icon" style="width: 20px; height: 20px;" alt="Error while was loading"> </a> 
