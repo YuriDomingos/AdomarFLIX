@@ -15,14 +15,16 @@ public class RealizadorModelo
 {
     
     private int pk_Realizador, fk_pessoa, fk_nacionalidade;
+    private String data_inico;
 
     public RealizadorModelo() {
     }
 
-    public RealizadorModelo(int pk_Realizador, int fk_pessoa, int fk_nacionalidade) {
+    public RealizadorModelo(int pk_Realizador, int fk_pessoa, int fk_nacionalidade, String data_inico) {
         this.pk_Realizador = pk_Realizador;
         this.fk_pessoa = fk_pessoa;
         this.fk_nacionalidade = fk_nacionalidade;
+        this.data_inico = data_inico;
     }
 
     public int getPk_Realizador() {
@@ -48,8 +50,16 @@ public class RealizadorModelo
     public void setFk_nacionalidade(int fk_nacionalidade) {
         this.fk_nacionalidade = fk_nacionalidade;
     }
-    
-    
+
+    public String getData_inico() {
+        return data_inico;
+    }
+
+    public void setData_inico(String data_inico) {
+        this.data_inico = data_inico;
+    }
+
+   
     
     
 }

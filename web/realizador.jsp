@@ -4,6 +4,8 @@
     Author     : Yuri Domingos
 --%>
 
+<%@page import="ucan.modelo.RealizadorModelo"%>
+<%@page import="ucan.dao.RealizadorDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="ucan.modelo.SocioModelo"%>
 <%@page import="ucan.dao.SocioDAO"%>
@@ -97,11 +99,10 @@
                                 </thead>
                                 
                                 <%
-                                    SocioDAO socioDAO = new SocioDAO();
-                                    List<SocioModelo> socios = socioDAO.listar_socio();
+                                    RealizadorDAO listaRealizadores = new RealizadorDAO();
                                     
-                                    for ( SocioModelo socio : socios)
-                                    {
+                                    List<RealizadorModelo> listaReal = listaRealizadores
+                                    
                                  %>
   
                                 <tbody>
