@@ -23,8 +23,7 @@ public class Conexao {
     private static String USER = "postgres";
     private static String PASSWORD = "postgres";
     private static Connection conexao;
-    
-    
+
     public static Connection abrirConexao()
     {
         
