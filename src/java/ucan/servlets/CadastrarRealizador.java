@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import ucan.dao.RealizadorDAO;
 
 /**
  *
@@ -19,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  * Data    : 01 - 01 - 2022
  * Objectivo : Construir o realizador 
  */
+
 @WebServlet(name = "CadastrarRealizador", urlPatterns = {"/CadastrarRealizador"})
 public class CadastrarRealizador extends HttpServlet {
 
@@ -33,6 +35,10 @@ public class CadastrarRealizador extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        
+     RealizadorDAO.cadastrarRealizador(Integer.parseInt(request.getParameter("fk_pessoa")),  Integer.parseInt(request.getParameter("fk_nacionalidade")));
+      request.getRequestDispatcher("realizador").forward(request, response);
         
     }
 
