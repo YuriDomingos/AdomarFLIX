@@ -62,7 +62,7 @@
                 <li> <a href="socios.jsp"> <span> </span class="las la-igloo">
                         <span> Sócios </span> </a>
                 </li>
-                <li> <a href=""> <span> </span class="las la-igloo">
+                <li> <a href="realizador.jsp"> <span> </span class="las la-igloo">
                         <span> Realizadores </span> </a>
                 </li>
             </ul>
