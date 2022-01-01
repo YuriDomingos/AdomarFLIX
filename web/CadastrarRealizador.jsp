@@ -91,7 +91,7 @@
                 <div class="card-body">
                     <h3 class="title">Cadastrar Realizador  </h3>
                     
-                    <form action="CadastrarSocio" method="post">
+                    <form action="CadastrarRealizador" method="post">
                   
                            <div class="row row-space">
                              <div class="col-2">

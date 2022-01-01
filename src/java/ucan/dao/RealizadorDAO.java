@@ -21,7 +21,7 @@ public class RealizadorDAO {
     
     
     
-    public static boolean cadastrarRealizador(RealizadorModelo realizadorModelo)
+    public static boolean cadastrarRealizador(int fk_pessoa, int fk_nacionalidade)
     {
         String insert = "INSERT INTO public.realizador VALUES (DEFAULT, ?, ?);";
         
@@ -30,8 +30,8 @@ public class RealizadorDAO {
             Connection con = Conexao.abrirConexao();
             PreparedStatement ps = con.prepareStatement(insert);
             
-            ps.setInt(1, realizadorModelo.getPk_Realizador());
-            ps.setInt(2, realizadorModelo.getFk_nacionalidade());
+            ps.setInt(1, fk_pessoa);
+            ps.setInt(2, fk_nacionalidade);
             ps.execute();
             ps.close();
             
