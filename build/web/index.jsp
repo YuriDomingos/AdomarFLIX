@@ -101,7 +101,7 @@ and open the template in the editor.
                     <div class="card">
                         <div class="card-header">
                             <h3> Filmes recentes</h3>
-                            <button onclick="window.location.href='_web/_webpage/filmes/filmes.jsp'"> Ver todos <span class="las la-arrow-right"></span> </button>
+                            <button onclick="window.location.href='filmes.jsp'"> Ver todos <span class="las la-arrow-right"></span> </button>
                         </div>
                         <div class="card-body">
                             <table width="100%">
