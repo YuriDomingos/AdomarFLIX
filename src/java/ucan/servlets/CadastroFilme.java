@@ -38,6 +38,22 @@ public class CadastroFilme extends HttpServlet
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        String tituloPort = request.getParameter("TituloPortu").trim();
+        String tituloOriginal = request.getParameter("TituloOriginal").trim();
+        String sinopse   = request.getParameter("sinopse").trim();
+        String idGenero = request.getParameter("GeneroFilme").trim();
+        String duracao = request.getParameter("duracao").trim();
+        String idClassificacao = request.getParameter("classificacao").trim();
+        
+        System.out.println("Os dados introduzidos foram ------------------");
+        System.out.println(" Titulo Portugues "+tituloPort);
+        System.out.println("Titulo Original " + tituloOriginal);
+        System.out.println("Sinopse "+sinopse);
+        System.out.println("idGenero  "+idGenero);
+        System.out.println("duracao "+duracao);
+        System.out.println("idClassificacao "+idClassificacao);
+        
+        request.getRequestDispatcher("listaFilmes.jsp").forward(request, response);
         System.out.println("Entrou agora ");
     }
 
