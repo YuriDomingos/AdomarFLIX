@@ -132,7 +132,7 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2" type="text" placeholder="Nº Bilhete" name="Nbilhete">
+                                    <input class="input--style-2" type="text" placeholder="Sinopse" name="Nbilhete">
                                 </div>
                             </div>
                             <div class="col-2">
