@@ -6,8 +6,15 @@
 package ucan.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Time;
+import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import static org.omg.CORBA.AnySeqHelper.insert;
 import ucan.modelo.FilmeModelo;
 import ucan.utils.Conexao;
 
@@ -20,8 +27,9 @@ import ucan.utils.Conexao;
 public class FilmeDAO 
 {
     
-    public boolean cadastrarFilme(FilmeModelo filmeModelo)
+    public static boolean cadastrarFilme(FilmeModelo filmeModelo) throws ParseException
     {
+        
         String insert = "INSERT INTO public.filme VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?);";
         
         try
@@ -34,7 +42,7 @@ public class FilmeDAO
             ps.setInt(4, filmeModelo.getFk_genero());
             ps.setInt(5, filmeModelo.getFk_classificacao());
             ps.setInt(6, filmeModelo.getFk_realizador());
-            ps.setTimestamp(7, filmeModelo.getDuracao());
+            ps.setString(7, filmeModelo.getDuracao());
             ps.execute();
             ps.close();
             

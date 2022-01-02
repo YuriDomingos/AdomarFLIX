@@ -17,12 +17,12 @@ public class FilmeModelo
 {
     private int pk_filme,fk_genero,fk_classificacao,fk_realizador;
     private String titulo_portugues,titulo_original,Sinopse, classificacao, nome_realizador , genero;
-    private Timestamp duracao;
+    private String duracao;
 
     public FilmeModelo() {
     }
 
-    public FilmeModelo(int pk_filme, int fk_genero, int fk_classificacao, int fk_realizador, String titulo_portugues, String titulo_original, String Sinopse, String classificacao, String nome_realizador, String genero, Timestamp duracao) {
+    public FilmeModelo(int pk_filme, int fk_genero, int fk_classificacao, int fk_realizador, String titulo_portugues, String titulo_original, String Sinopse, String classificacao, String nome_realizador, String genero, String duracao) {
         this.pk_filme = pk_filme;
         this.fk_genero = fk_genero;
         this.fk_classificacao = fk_classificacao;
@@ -116,15 +116,14 @@ public class FilmeModelo
         this.genero = genero;
     }
 
-    public Timestamp getDuracao() {
+    public String getDuracao() {
         return duracao;
     }
 
-    public void setDuracao(Timestamp duracao) {
+    public void setDuracao(String duracao) {
         this.duracao = duracao;
     }
 
-    
     
     
 }
