@@ -320,7 +320,8 @@ input {
   cursor: pointer;
 }
 
-.input--style-2 {
+.input--style-2 
+{
   padding: 9px 0;
   color: #666;
   font-size: 16px;
@@ -434,7 +435,7 @@ input {
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   border: 1px solid #e0e0e0;
   margin-top: 5px;
-  overflow: hidden;
+
 }
 
 /* ==========================================================================

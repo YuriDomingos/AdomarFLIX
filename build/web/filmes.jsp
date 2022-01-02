@@ -93,7 +93,7 @@
         <h1 class="heading"> Nossos filmes   </h1>
         <div class="card-header">
                <h3>  </h3>
-               <button> Novo filme <span class="las la-arrow-right"></span> </button>
+               <button > Novo filme <span class="las la-arrow-right"></span> </button>
          </div>
 
         <div class="box-container">
