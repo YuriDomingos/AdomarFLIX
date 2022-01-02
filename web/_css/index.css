@@ -19,6 +19,10 @@
 
 }
 
+input[type=time]::-webkit-datetime-edit-ampm-field {
+  display: none;
+}
+
 .sidebar {
 
     width: 345px;

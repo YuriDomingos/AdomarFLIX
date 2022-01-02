@@ -126,11 +126,12 @@
                                 </div>
                             </div>
                         </div>
+                                        
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     Duração
-                                    <input class="input--style-2" type="time" placeholder="Sinopse" name="duracao">
+                                    <input class="input--style-2" type="time" value="01:00:00" placeholder="Sinopse" name="duracao">
                                 </div>
                              
                             </div>
@@ -195,7 +196,9 @@
                             </div>
                         </div>
                 
-                                         
+                                        <div>
+                                            
+                                        </div>       
                         <button type="submit" class="button" onload="salvou()">
                             
 	                   <span class="submit">Cadastrar</span>

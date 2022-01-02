@@ -50,9 +50,6 @@
                 <li> <a href="pessoas.jsp"> <span> </span class="las la-igloo">
                     <span> Pessoas </span> </a>
                 </li>
-                <li> <a href=""> <span> </span class="las la-igloo">
-                        <span> Funcionarios </span> </a>
-                </li>
                 <li> <a href="actor.jsp"> <span> </span class="las la-igloo">
                         <span> Actores </span> </a>
                 </li>
