@@ -52,12 +52,11 @@ System.out.println("Entrou agora ");
         filmeModelo.setTitulo_original(request.getParameter("TituloOriginal").trim());
         filmeModelo.setSinopse(request.getParameter("sinopse").trim());
         filmeModelo.setFk_genero(Integer.parseInt(request.getParameter("GeneroFilme").trim()));
-        filmeModelo.setDuracao(request.getParameter("duracao").trim());
+        filmeModelo.setDuracao(request.getParameter("duracao").toString());
         filmeModelo.setFk_classificacao(Integer.parseInt( request.getParameter("classificacao").trim()));
         filmeModelo.setFk_realizador(Integer.parseInt(request.getParameter("Realizador").trim()));
         
-        
-                
+                   
         System.out.println(filmeModelo.getSinopse());
         try {
             
