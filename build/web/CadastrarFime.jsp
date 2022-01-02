@@ -4,6 +4,8 @@
     Author     : Yuri Domingos
 --%>
 
+<%@page import="ucan.dao.GeneroFilmeDAO"%>
+<%@page import="ucan.modelo.GeneroFilmeModelo"%>
 <%@page import="ucan.modelo.MoradaModelo"%>
 <%@page import="ucan.dao.MoradaDAO"%>
 <%@page import="ucan.modelo.EstadoCivilModelo"%>
@@ -106,14 +108,13 @@
                                         <select name="sexo">
                                             
                                             <%
-                                                SexoDAO sexo_lista = new SexoDAO();
-                                                List<SexoModelo> lista = sexo_lista.listar_sexo();
-                                                for (SexoModelo sexo : lista)
+                                                GeneroFilmeDAO generoDAO = new GeneroFilmeDAO();
+                                                List<GeneroFilmeModelo> lista_filmes = generoDAO.listarFilmes();
+                                                for(GeneroFilmeModelo genero : lista_filmes)
                                                 {
-                                                
                                                    %>
                                                 
-                                                   <option value=<%= sexo.getPk_sexo()%>> <%= sexo.getDescricao() %> </option> 
+                                                   <option value=<%= genero.getPk_generoFilme() %>> <%= genero.getDescricao() %> </option> 
                                                    
                                                      <%                                                    
                                                    }
