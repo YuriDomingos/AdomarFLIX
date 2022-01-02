@@ -4,6 +4,8 @@
     Author     : Yuri Domingos
 --%>
 
+<%@page import="ucan.modelo.ClassificacaoModelo"%>
+<%@page import="ucan.dao.ClassificacaoDAO"%>
 <%@page import="ucan.modelo.RealizadorModelo"%>
 <%@page import="ucan.dao.RealizadorDAO"%>
 <%@page import="ucan.dao.GeneroFilmeDAO"%>
@@ -136,16 +138,16 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="estado_civil">
-                                            
+                                        <select name="classificacao">
+                                             <option disabled="disabled" selected="selected">Classificao filme </option>
                                             <%
-                                                EstadoCivilDAO estado_civil = new EstadoCivilDAO();
-                                                List<EstadoCivilModelo> listaESTC = estado_civil.listarEstadoCivil();
-                                                for ( EstadoCivilModelo estd : listaESTC)
+                                                ClassificacaoDAO classific = new ClassificacaoDAO();
+                                                List<ClassificacaoModelo> lista = classific.listaClassificacao();
+                                                for ( ClassificacaoModelo classificaaoM : lista)
                                                 {
                                             %>
                                             
-                                            <option value=<%= estd.getPk_estado_civil()%>><%= estd.getDescricao() %> </option>
+                                            <option value=<%= classificaaoM.getPk_ClassificaoModelo() %>><%= classificaaoM.getDescricacao() %> </option>
                                             <%
                                            }
                                        %>
@@ -155,13 +157,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <input class="input--style-2" type="email" placeholder="Email" name="email">
-                                </div>
-                            </div>
-                        </div>
+                
                         
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
