@@ -40,7 +40,7 @@
     <div class="sidebar">
         <div class="sidebar-logotipo">
             <!-- No momento estamos com falta de icones então, depois vamos adinicionar   -->
-            <h2> <span class="icon mencionado "></span> AdomarMovies </h2>
+            <h2> <span class="icon mencionado "></span> AdomarFlix </h2>
         </div>
 
         <!-- Falta adicionar os icones  para cada options -->
@@ -52,9 +52,6 @@
                 </li>
                 <li> <a href="pessoas.jsp"> <span> </span class="las la-igloo">
                     <span> Pessoas </span> </a>
-                </li>
-                <li> <a href=""> <span> </span class="las la-igloo">
-                        <span> Funcionarios </span> </a>
                 </li>
                 <li> <a href="filmes.jsp"> <span> </span class="las la-igloo">
                         <span> Filmes </span> </a>

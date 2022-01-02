@@ -30,20 +30,17 @@ and open the template in the editor.
 
         <div class="sidebar-menu">
             <ul>
-                <li> <a href="" class="active"> <span> </span class="las la-igloo">
+                <li> <a href="index.jsp" class="active"> <span> </span class="las la-igloo">
                         <span> Dashboard </span> </a>
                 </li>
                 <li> <a href="pessoas.jsp"> <span> </span class="las la-igloo">
                     <span> Pessoas </span> </a>
                 </li>
-                <li> <a href=""> <span> </span class="las la-igloo">
-                        <span> Funcionarios </span> </a>
-                </li>
                 <li> <a href="filmes.jsp"> <span> </span class="las la-igloo">
                         <span> Filmes </span> </a>
                 </li>
                   <li> <a href=""> <span> </span class="las la-igloo">
-                        <span> Emprestimos </span> </a>
+                        <span> Alugures </span> </a>
                 </li>
                 <li> <a href="actor.jsp"> <span> </span class="las la-igloo">
                         <span> Actores </span> </a>
