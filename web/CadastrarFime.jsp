@@ -92,18 +92,18 @@
                 <div class="card-body">
                     <h3 class="title">Cadastrar filme </h3>
                     
-                    <form action="CadastroPessoaServlet" method="post">
-                        <div class="input-group">
-                            <input class="input--style-2" type="text" required="true" placeholder="Titulo português" name="TituloP">
+                 <form action="CadastroPessoaServlet" method="post">
+                     
+                     <div class="input-group">
+                            <input class="input--style-2" type="text" required="true" placeholder="Titulo português" name="TituloPortu">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-2" type="text" placeholder="Titulo original" name="TituloO">
+                            <input class="input--style-2" type="text" placeholder="Titulo original" name="TituloOriginal">
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
-                                <div class="input-group">
-                                    <input class="input--style-2 js-datepicker" type="text" name="Dnascimento" placeholder="Data de nascimento" name="birthday">
-                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                               <div class="input-group">
+                                    <input class="input--style-2" type="text" placeholder="Sinopse" name="sinopse">
                                 </div>
                             </div>
                             <div class="col-2">
@@ -132,8 +132,10 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2" type="text" placeholder="Sinopse" name="Nbilhete">
+                                    Duração
+                                    <input class="input--style-2" type="time" placeholder="Sinopse" name="duracao">
                                 </div>
+                             
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
@@ -157,10 +159,16 @@
                                 </div>
                             </div>
                         </div>
-                
-                        
-                        <div class="input-group">
-                            <div class="rs-select2 js-select-simple select--no-search">
+                     <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-2" type="file" placeholder="imagem" name="imagem">
+                                </div>
+                                
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="Realizador">
                                     <option disabled="disabled" selected="selected"> Realizador </option>
                                     <%
@@ -183,11 +191,15 @@
                                         %>
                                         
                                 </select>
-                                <div class="select-dropdown"></div>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                                       
-                                       <button type="submit" class="button" onload="salvou()">
+                
+                                         
+                        <button type="submit" class="button" onload="salvou()">
 	                   <span class="submit">Cadastrar</span>
 	                   <span class="loading"><i class="fa fa-refresh"></i></span>
 	                   <span class="check"><i class="fa fa-check"></i></span>
