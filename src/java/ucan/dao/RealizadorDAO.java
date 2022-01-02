@@ -46,8 +46,43 @@ public class RealizadorDAO {
         return false;
     }
     
+   
     
-    public ArrayList<RealizadorModelo> listaRealizadores()
+    
+     public ArrayList<RealizadorModelo> listaRealizadoresComNome()
+    {
+         String query = "SELECT r.pk_realizador, p.primeiro_nome, p.ultimo_nome FROM pessoa p "
+                                                                        + "INNER JOIN realizador r "
+                                                                        + "ON ( r.fk_pessoa = p.pk_pessoa);";
+         
+         
+        ArrayList<RealizadorModelo> listaRealizador = new ArrayList<>();
+        
+        try
+        {
+            Connection con = Conexao.abrirConexao();
+            PreparedStatement ps = con.prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+            
+            while ( rs.next())
+            {
+                RealizadorModelo realizador = new RealizadorModelo();
+                realizador.setPk_Realizador(rs.getInt(1));
+                realizador.setPrimeiro_nome(rs.getString(2));
+                realizador.setUltimo_nome(rs.getString(3));         
+                listaRealizador.add(realizador);
+            }
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("Erro ao listar os realizadores "+ex.toString());
+        }
+        
+        return listaRealizador;
+    }
+     
+     
+      public ArrayList<RealizadorModelo> listaRealizadores()
     {
         String query = "SELECT * FROM public.realizador";
         ArrayList<RealizadorModelo> listaRealizador = new ArrayList<>();
@@ -77,3 +112,6 @@ public class RealizadorDAO {
     }
     
 }
+    
+   
+   

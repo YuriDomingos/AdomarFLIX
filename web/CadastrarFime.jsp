@@ -4,6 +4,8 @@
     Author     : Yuri Domingos
 --%>
 
+<%@page import="ucan.modelo.RealizadorModelo"%>
+<%@page import="ucan.dao.RealizadorDAO"%>
 <%@page import="ucan.dao.GeneroFilmeDAO"%>
 <%@page import="ucan.modelo.GeneroFilmeModelo"%>
 <%@page import="ucan.modelo.MoradaModelo"%>
@@ -166,14 +168,17 @@
                                 <select name="Realizador">
                                     <option disabled="disabled" selected="selected"> Realizador </option>
                                     <%
-                                        MoradaDAO moradas = new MoradaDAO();
-                                        List<MoradaModelo> lista_morada = moradas.listar_moradas();
+                                        
+                                        RealizadorDAO realizador = new RealizadorDAO();
+                                        List<RealizadorModelo> realizadorModelo = realizador.listaRealizadoresComNome();
 
-                                        for ( MoradaModelo morada : lista_morada)
+                                        for ( RealizadorModelo realizadorLista : realizadorModelo)
                                         {
                                         
                                         %>
-                                        <option value=<%= morada.getPk_moradaModelo()%>> <%= morada.getDescricao()%> </option>
+                                        <option value=<%= realizadorLista.getPk_Realizador()%>> <%= realizadorLista.getPrimeiro_nome() 
+                                                                                                    + realizadorLista.getUltimo_nome() %> 
+                                        </option>
                                         
                                         <%
                                             

@@ -15,16 +15,19 @@ public class RealizadorModelo
 {
     
     private int pk_Realizador, fk_pessoa, fk_nacionalidade;
-    private String data_inico;
+    private String data_inico, primeiro_nome, ultimo_nome;
+    
 
     public RealizadorModelo() {
     }
 
-    public RealizadorModelo(int pk_Realizador, int fk_pessoa, int fk_nacionalidade, String data_inico) {
+    public RealizadorModelo(int pk_Realizador, int fk_pessoa, int fk_nacionalidade, String data_inico, String primeiro_nome, String ultimo_nome) {
         this.pk_Realizador = pk_Realizador;
         this.fk_pessoa = fk_pessoa;
         this.fk_nacionalidade = fk_nacionalidade;
         this.data_inico = data_inico;
+        this.primeiro_nome = primeiro_nome;
+        this.ultimo_nome = ultimo_nome;
     }
 
     public int getPk_Realizador() {
@@ -59,7 +62,21 @@ public class RealizadorModelo
         this.data_inico = data_inico;
     }
 
+    public String getPrimeiro_nome() {
+        return primeiro_nome;
+    }
+
+    public void setPrimeiro_nome(String primeiro_nome) {
+        this.primeiro_nome = primeiro_nome;
+    }
+
+    public String getUltimo_nome() {
+        return ultimo_nome;
+    }
+
+    public void setUltimo_nome(String ultimo_nome) {
+        this.ultimo_nome = ultimo_nome;
+    }
+
    
-    
-    
 }
