@@ -84,14 +84,14 @@
             <div class="card card-2">
               
                 <div class="card-body">
-                    <h3 class="title">Cadastrar Pessoa </h3>
+                    <h3 class="title">Cadastrar filme </h3>
                     
                     <form action="CadastroPessoaServlet" method="post">
                         <div class="input-group">
-                            <input class="input--style-2" type="text" required="true" placeholder="Primeiro Nome" name="Pnome">
+                            <input class="input--style-2" type="text" required="true" placeholder="Titulo português" name="TituloP">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-2" type="text" placeholder="Último Nome" name="Unome">
+                            <input class="input--style-2" type="text" placeholder="Titulo original" name="TituloO">
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
