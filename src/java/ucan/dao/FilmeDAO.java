@@ -35,11 +35,13 @@ public class FilmeDAO
             ps.setInt(5, filmeModelo.getFk_classificacao());
             ps.setInt(6, filmeModelo.getFk_realizador());
             ps.setTimestamp(7, filmeModelo.getDuracao());
+            ps.execute();
+            ps.close();
             
         }
         catch(SQLException ex)
         {
-            
+            System.out.println("Erro ao salvar o filme "+ex.toString());
         }
         
         return false;

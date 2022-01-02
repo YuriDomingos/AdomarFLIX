@@ -89,7 +89,7 @@
                 <div class="card-body">
                     <h3 class="title">Cadastrar filme </h3>
                     
-                 <form action="CadastroPessoaServlet" method="post">
+                 <form action="CadastroFilme" method="post">
                      
                      <div class="input-group">
                         <input class="input--style-2" type="text" required="true" placeholder="Titulo português" name="TituloPortu">
