@@ -58,9 +58,6 @@
                 <li> <a href="pessoas.jsp"> <span> </span class="las la-igloo">
                     <span> Pessoas </span> </a>
                 </li>
-                <li> <a href=""> <span> </span class="las la-igloo">
-                        <span> Funcionarios </span> </a>
-                </li>
                 <li> <a href="filmes.jsp"> <span> </span class="las la-igloo">
                         <span> Filmes </span> </a>
                 </li>
@@ -95,8 +92,8 @@
                  <form action="CadastroPessoaServlet" method="post">
                      
                      <div class="input-group">
-                            <input class="input--style-2" type="text" required="true" placeholder="Titulo português" name="TituloPortu">
-                        </div>
+                        <input class="input--style-2" type="text" required="true" placeholder="Titulo português" name="TituloPortu">
+                      </div>
                         <div class="input-group">
                             <input class="input--style-2" type="text" placeholder="Titulo original" name="TituloOriginal">
                         </div>
@@ -200,26 +197,22 @@
                 
                                          
                         <button type="submit" class="button" onload="salvou()">
+                            
 	                   <span class="submit">Cadastrar</span>
 	                   <span class="loading"><i class="fa fa-refresh"></i></span>
 	                   <span class="check"><i class="fa fa-check"></i></span>
                            
                        </button>
-                                       
-                                       
-                                       
+                                                                           
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
-                                       
-                                       
-   
+                                      
         </main>
-
-
+                                        
     </div>
             
         

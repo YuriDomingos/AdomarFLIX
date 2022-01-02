@@ -89,12 +89,12 @@
                             <input class="input--style-2" type="text" required="true" placeholder="Primeiro Nome" name="Pnome">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-2" type="text" placeholder="Último Nome" name="Unome">
+                            <input class="input--style-2" type="text" required="true" placeholder="Último Nome" name="Unome">
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2 js-datepicker" type="text" name="Dnascimento" placeholder="Data de nascimento" name="birthday">
+                                    <input class="input--style-2 js-datepicker" type="text" required="true" name="Dnascimento" placeholder="Data de nascimento" name="birthday">
                                     <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                 </div>
                             </div>
@@ -125,7 +125,7 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2" type="text" placeholder="Nº Bilhete" name="Nbilhete">
+                                    <input class="input--style-2" type="text" required="true" placeholder="Nº Bilhete" name="Nbilhete">
                                 </div>
                             </div>
                             <div class="col-2">
@@ -153,13 +153,13 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2" type="email" placeholder="Email" name="email">
+                                    <input class="input--style-2" type="email" required="true" placeholder="Email" name="email">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <input class="input--style-2" type="number" placeholder="+244 " name="numero">
+                                        <input class="input--style-2" type="number" required="true" placeholder="+244 " name="numero">
                                         <div class="select-dropdown"></div>
                                     </div>
                                 </div>
