@@ -105,8 +105,8 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="sexo">
-                                            
+                                        <select name="GeneroFilme">
+                                             <option disabled="disabled" selected="selected">Genero do filme</option>
                                             <%
                                                 GeneroFilmeDAO generoDAO = new GeneroFilmeDAO();
                                                 List<GeneroFilmeModelo> lista_filmes = generoDAO.listarFilmes();
@@ -159,20 +159,12 @@
                                     <input class="input--style-2" type="email" placeholder="Email" name="email">
                                 </div>
                             </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <div class="rs-select2 js-select-simple select--no-search">
-                                        <input class="input--style-2" type="number" placeholder="+244 " name="numero">
-                                        <div class="select-dropdown"></div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="Morada">
-                                    <option disabled="disabled" selected="selected">Morada</option>
+                                <select name="Realizador">
+                                    <option disabled="disabled" selected="selected"> Realizador </option>
                                     <%
                                         MoradaDAO moradas = new MoradaDAO();
                                         List<MoradaModelo> lista_morada = moradas.listar_moradas();
