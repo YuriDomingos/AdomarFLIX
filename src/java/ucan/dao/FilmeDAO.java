@@ -5,6 +5,12 @@
  */
 package ucan.dao;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import ucan.modelo.FilmeModelo;
+import ucan.utils.Conexao;
+
 /**
  *
  * @author : Yuri Domingos
@@ -13,5 +19,30 @@ package ucan.dao;
  */
 public class FilmeDAO 
 {
+    
+    public boolean cadastrarFilme(FilmeModelo filmeModelo)
+    {
+        String insert = "INSERT INTO public.filme VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?);";
+        
+        try
+        {
+            Connection con = Conexao.abrirConexao();
+            PreparedStatement ps = con.prepareStatement(insert);
+            ps.setString(1, filmeModelo.getTitulo_portugues());
+            ps.setString(2, filmeModelo.getTitulo_original());
+            ps.setString(3, filmeModelo.getSinopse());
+            ps.setInt(4, filmeModelo.getFk_genero());
+            ps.setInt(5, filmeModelo.getFk_classificacao());
+            ps.setInt(6, filmeModelo.getFk_realizador());
+            ps.setTimestamp(7, filmeModelo.getDuracao());
+            
+        }
+        catch(SQLException ex)
+        {
+            
+        }
+        
+        return false;
+    }
     
 }

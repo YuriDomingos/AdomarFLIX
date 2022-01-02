@@ -5,6 +5,8 @@
  */
 package ucan.modelo;
 
+import java.sql.Timestamp;
+
 /**
  *
  * @author Yuri Domingos 
@@ -14,12 +16,13 @@ package ucan.modelo;
 public class FilmeModelo 
 {
     private int pk_filme,fk_genero,fk_classificacao,fk_realizador;
-    private String titulo_portugues,titulo_original,Sinopse,duracao;
+    private String titulo_portugues,titulo_original,Sinopse, classificacao, nome_realizador , genero;
+    private Timestamp duracao;
 
     public FilmeModelo() {
     }
 
-    public FilmeModelo(int pk_filme, int fk_genero, int fk_classificacao, int fk_realizador, String titulo_portugues, String titulo_original, String Sinopse, String duracao) {
+    public FilmeModelo(int pk_filme, int fk_genero, int fk_classificacao, int fk_realizador, String titulo_portugues, String titulo_original, String Sinopse, String classificacao, String nome_realizador, String genero, Timestamp duracao) {
         this.pk_filme = pk_filme;
         this.fk_genero = fk_genero;
         this.fk_classificacao = fk_classificacao;
@@ -27,6 +30,9 @@ public class FilmeModelo
         this.titulo_portugues = titulo_portugues;
         this.titulo_original = titulo_original;
         this.Sinopse = Sinopse;
+        this.classificacao = classificacao;
+        this.nome_realizador = nome_realizador;
+        this.genero = genero;
         this.duracao = duracao;
     }
 
@@ -86,14 +92,38 @@ public class FilmeModelo
         this.Sinopse = Sinopse;
     }
 
-    public String getDuracao() {
+    public String getClassificacao() {
+        return classificacao;
+    }
+
+    public void setClassificacao(String classificacao) {
+        this.classificacao = classificacao;
+    }
+
+    public String getNome_realizador() {
+        return nome_realizador;
+    }
+
+    public void setNome_realizador(String nome_realizador) {
+        this.nome_realizador = nome_realizador;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public Timestamp getDuracao() {
         return duracao;
     }
 
-    public void setDuracao(String duracao) {
+    public void setDuracao(Timestamp duracao) {
         this.duracao = duracao;
     }
-    
+
     
     
     
