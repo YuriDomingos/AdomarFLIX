@@ -92,7 +92,7 @@
                                                         {
                                                       %> 
                                                       
-                                                      <option value=<%=pessoa.getPk_pessoa()%>> <%= pessoa.getPrimeiro_nome() + pessoa.getUltimo_nome() %> </option>
+                                                      <option value=<%=pessoa.getPk_pessoa()%>> <%= pessoa.getPrimeiro_nome() +"  "+ pessoa.getUltimo_nome() %> </option>
                                                       
                                                       <%}
 
