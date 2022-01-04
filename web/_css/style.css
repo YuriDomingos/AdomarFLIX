@@ -1,5 +1,6 @@
 
 .form-v10-content  {
+    
 	background: #fff;
 	width: 1100px;
 	border-radius: 10px;
@@ -38,7 +39,7 @@
 }
 .form-v10-content .form-detail .form-right {
 	width: 100%;
-	background: #4835d4;
+	background: white;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
@@ -53,7 +54,9 @@
 	position: relative;
 	margin-bottom: 24px;
 	padding-left: 60px;
-    padding-right: 50px;
+        padding-right: 50px;
+     
+        color: red;
 }
 .form-v10-content .form-detail .form-left .form-group .form-row.form-row-1 {
 	width: 50%;
@@ -203,7 +206,7 @@
 }
 .form-v10-content .form-detail .form-right .register {
 
-	background: white;
+	background: #3498db;
 	border-radius: 25px;
 	-o-border-radius: 25px;
 	-ms-border-radius: 25px;
@@ -218,9 +221,9 @@
 	border: none;
 	margin: 6px 0 50px 0px;
 	cursor: pointer;
-	color: #333;
+	color: white;
 	font-weight: 700;
-	font-size: 15px;
+	font-size: 14px;
 }
 .form-v10-content .form-detail .form-right .register:hover {
 	background: #ccc;
@@ -283,11 +286,14 @@
 	.form-v10-content .form-detail .form-right .form-group .form-row.form-row-2 {
 	    width: auto;
 	    padding: 0 50px 0 60px;
+        
 	}
 	.form-v10-content .form-detail .select-btn,
 	.form-v10-content .form-detail .form-left .form-group .form-row.form-row-4 .select-btn,
 	.form-v10-content .form-detail .form-right .form-group .form-row.form-row-2 .select-btn {
 		right: 15%;
+                color: red;
+                background: red;
 	}
 
 }

@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="_css/index.css" />
     <link rel="stylesheet" href="_css/cadastrarPessoa.css"/>
     <link rel="stylesheet" type="text/css" href="_css/montserrat-font.css">
-    <link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="_css/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="_css/style.css"/>
     
     <!-- Vamos adicionar um awesome basico  do cdn do texto-->
@@ -102,9 +102,10 @@
 						  	<i class="zmdi zmdi-chevron-down"></i>
 						</span>
 					</div>
+                                                
 		
 					<div class="form-row-last">
-						<input type="submit" name="register" class="register" value="Register Badge">
+						<input type="submit" name="register" class="register" value="Cadastrar realizador ">
 					</div>
 				</div>
 			</form>
