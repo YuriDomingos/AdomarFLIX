@@ -160,7 +160,7 @@
                      <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2" type="file" placeholder="imagem" name="imagem">
+                                    <input class="input--style-2" type="file" placeholder="imagem" name="imagem"  accept="_assets/filmes/*">
                                 </div>
                                 
                             </div>

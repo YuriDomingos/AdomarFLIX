@@ -159,7 +159,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <input class="input--style-2" type="number" required="true" placeholder="+244 " name="numero">
+                                        <input class="input--style-2" type="number" required="true" placeholder="+244 " maxlength="9" name="numero">
                                         <div class="select-dropdown"></div>
                                     </div>
                                 </div>

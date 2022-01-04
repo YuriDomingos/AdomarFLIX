@@ -4,6 +4,8 @@
     Author     : Yuri Domingos
 --%>
 
+<%@page import="ucan.modelo.FilmeModelo"%>
+<%@page import="ucan.dao.FilmeDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="ucan.modelo.SocioModelo"%>
 <%@page import="ucan.dao.SocioDAO"%>
@@ -92,20 +94,16 @@
                                 </thead>
                                 
                                 <%
-                                    SocioDAO socioDAO = new SocioDAO();
-
-                                    List<SocioModelo> socios = socioDAO.listar_socio();
-                                    
-                                    for ( SocioModelo socio : socios)
-                                    {
+                                     FilmeDAO filmeDAO = new FilmeDAO();
+                                     List<FilmeModelo> listaF = filmeDAO.listarFilmes();
+                                     for(FilmeModelo filme : listaF)
+                                     {
                                  %>
   
                                 <tbody>
                                     <tr>
-                                        <td><%=socio.getPk_socio()  %> </td>
-                                        <td><%=socio.getPrimeiro_nome() %> </td>
-                                        <td><%= socio.getUltimo_nome()%> </td>
-                                        <td><%= socio.getData_inicio() %> </td>
+                                        <td><img src="_assets/filmes/<%=filme.getUrl_imagem() %>"/> </td>
+                                        
                                        
                                         <td>
                                          <a class="icon1" > <img  src="_assets/editar.png"  class="icon" style="width: 20px; height: 20px;" alt="Error while was loading"> </a> 

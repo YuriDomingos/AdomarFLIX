@@ -6,15 +6,11 @@
 package ucan.dao;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import static org.omg.CORBA.AnySeqHelper.insert;
+import java.util.ArrayList;
 import ucan.modelo.FilmeModelo;
 import ucan.utils.Conexao;
 
@@ -30,7 +26,7 @@ public class FilmeDAO
     public static boolean cadastrarFilme(FilmeModelo filmeModelo) throws ParseException
     {
         
-        String insert = "INSERT INTO public.filme VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?);";
+        String insert = "INSERT INTO public.filme VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?,?);";
         
         try
         {
@@ -43,6 +39,7 @@ public class FilmeDAO
             ps.setInt(5, filmeModelo.getFk_classificacao());
             ps.setInt(6, filmeModelo.getFk_realizador());
             ps.setString(7, filmeModelo.getDuracao());
+            ps.setString(8, filmeModelo.getUrl_imagem());
             ps.execute();
             ps.close();
             
@@ -53,6 +50,34 @@ public class FilmeDAO
         }
         
         return false;
+    }
+    
+    public ArrayList<FilmeModelo> listarFilmes()
+    {
+        
+        ArrayList<FilmeModelo> listaFilmes = new ArrayList<>();
+        String query = " SELECT *FROM filme";
+        
+        try
+        {
+            Connection con = Conexao.abrirConexao();
+            PreparedStatement ps = con.prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+            
+            while(rs.next())
+            {
+                FilmeModelo filmeModelo = new FilmeModelo();
+                filmeModelo.setUrl_imagem(rs.getString(8));
+                listaFilmes.add(filmeModelo);
+                
+            }
+        }
+        catch(SQLException ex)
+        {
+            System.out.println(" Erro "+ex.toString());
+        }
+        
+        return listaFilmes;
     }
     
 }

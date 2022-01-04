@@ -17,12 +17,12 @@ public class FilmeModelo
 {
     private int pk_filme,fk_genero,fk_classificacao,fk_realizador;
     private String titulo_portugues,titulo_original,Sinopse, classificacao, nome_realizador , genero;
-    private String duracao;
+    private String duracao, url_imagem;
 
     public FilmeModelo() {
     }
 
-    public FilmeModelo(int pk_filme, int fk_genero, int fk_classificacao, int fk_realizador, String titulo_portugues, String titulo_original, String Sinopse, String classificacao, String nome_realizador, String genero, String duracao) {
+    public FilmeModelo(int pk_filme, int fk_genero, int fk_classificacao, int fk_realizador, String titulo_portugues, String titulo_original, String Sinopse, String classificacao, String nome_realizador, String genero, String duracao, String url_imagem) {
         this.pk_filme = pk_filme;
         this.fk_genero = fk_genero;
         this.fk_classificacao = fk_classificacao;
@@ -34,6 +34,7 @@ public class FilmeModelo
         this.nome_realizador = nome_realizador;
         this.genero = genero;
         this.duracao = duracao;
+        this.url_imagem = url_imagem;
     }
 
     public int getPk_filme() {
@@ -124,6 +125,14 @@ public class FilmeModelo
         this.duracao = duracao;
     }
 
-    
+    public String getUrl_imagem() {
+        return url_imagem;
+    }
+
+    public void setUrl_imagem(String url_imagem) {
+        this.url_imagem = url_imagem;
+    }
+
+  
     
 }

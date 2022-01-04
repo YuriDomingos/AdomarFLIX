@@ -43,29 +43,30 @@ public class CadastroFilme extends HttpServlet
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-System.out.println("Entrou agora ");
-        
-        
-        FilmeModelo filmeModelo = new FilmeModelo();
-        
-        filmeModelo.setTitulo_portugues(request.getParameter("TituloPortu").trim());
-        filmeModelo.setTitulo_original(request.getParameter("TituloOriginal").trim());
-        filmeModelo.setSinopse(request.getParameter("sinopse").trim());
-        filmeModelo.setFk_genero(Integer.parseInt(request.getParameter("GeneroFilme").trim()));
-        filmeModelo.setDuracao(request.getParameter("duracao").toString());
-        filmeModelo.setFk_classificacao(Integer.parseInt( request.getParameter("classificacao").trim()));
-        filmeModelo.setFk_realizador(Integer.parseInt(request.getParameter("Realizador").trim()));
-        
-                   
-        System.out.println(filmeModelo.getSinopse());
         try {
+            System.out.println("Entrou agora ");
             
+            
+            FilmeModelo filmeModelo = new FilmeModelo();
+            
+            filmeModelo.setTitulo_portugues(request.getParameter("TituloPortu").trim());
+            filmeModelo.setTitulo_original(request.getParameter("TituloOriginal").trim());
+            filmeModelo.setSinopse(request.getParameter("sinopse").trim());
+            filmeModelo.setFk_genero(Integer.parseInt(request.getParameter("GeneroFilme").trim()));
+            filmeModelo.setDuracao(request.getParameter("duracao"));
+            filmeModelo.setFk_classificacao(Integer.parseInt( request.getParameter("classificacao").trim()));
+            filmeModelo.setFk_realizador(Integer.parseInt(request.getParameter("Realizador").trim()));
+            filmeModelo.setUrl_imagem(request.getParameter("imagem").trim());
             FilmeDAO.cadastrarFilme(filmeModelo);
+            
+            
+            System.out.println(filmeModelo.getSinopse());
+            
+            
+            request.getRequestDispatcher("listaFilmes.jsp").forward(request, response);
         } catch (ParseException ex) {
             Logger.getLogger(CadastroFilme.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        request.getRequestDispatcher("listaFilmes.jsp").forward(request, response);
 
     }
 

@@ -1,7 +1,7 @@
 <%-- 
     Document   : socios
     Created on : Dec 26, 2021, 5:01:52 PM
-    Author     : yuri
+    Author     : Yuri Domingos 
 --%>
 
 <%@page import="ucan.modelo.SocioModelo"%>
