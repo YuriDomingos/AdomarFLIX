@@ -39,9 +39,6 @@ and open the template in the editor.
                 <li> <a href="filmes.jsp"> <span> </span class="las la-igloo">
                         <span> Filmes </span> </a>
                 </li>
-                <li> <a href="filmes.jsp"> <span> </span class="las la-igloo">
-                        <span> Alugueres </span> </a>
-                </li>
                   <li> <a href=""> <span> </span class="las la-igloo">
                         <span> Alugures </span> </a>
                 </li>

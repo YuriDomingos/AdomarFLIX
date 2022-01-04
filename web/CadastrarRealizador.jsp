@@ -19,18 +19,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Icons font CSS-->
-    <link href="_assets/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="_assets/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
-    <!-- Vendor CSS-->
-    <link href="_assets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="_assets/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="_css/index.css" />
     <link rel="stylesheet" href="_css/cadastrarPessoa.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/montserrat-font.css">
+    <link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="_css/style.css"/>
     
     <!-- Vamos adicionar um awesome basico  do cdn do texto-->
+    
     <title>Administrador</title>
 </head>
 
@@ -75,119 +72,49 @@
 
         <main>
         
-          <div class="primer-card-header">
-                           
-            <button onclick="window.location.href='actor.jsp'"> Ver lista de actores <span class="las la-arrow-right"></span> </button>
-                         
-          </div>
-          
-      <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
-        <div class="wrapper wrapper--w960">
-            <div class="card card-2">
-              
-                <div class="card-body">
-                    <h3 class="title">Cadastrar Realizador  </h3>
-                    
-                    <form action="CadastrarRealizador" method="post">
-                  
-                           <div class="row row-space">
-                             <div class="col-2">
-                                <div class="input-group">
-                                    <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="fk_pessoa" method="post">
-                                    
-                                    <option disabled="disabled" selected="selected">Selecione uma pessoa </option>
-                                    <%
-                                        PessoaDAO pessoaDAO = new PessoaDAO();
-                                        List<PessoaModelo> lista_pessoa = pessoaDAO.listar_pessoa();
-                                        
-                                        for ( PessoaModelo pessoaModelo : lista_pessoa)
-                                        {                                                                         
-                                        %>
-                                        
-                                        <option value=<%= pessoaModelo.getPk_pessoa()%>> <%=pessoaModelo.getPrimeiro_nome()  +  pessoaModelo.getUltimo_nome()%>
-                                        
-                                        </option>   
-                                        <%}
-                                        
-                                     %>
-                                     
-                                </select>
-                                        <div class="select-dropdown"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="fk_nacionalidade">
-                                         <option disabled="disabled" selected="selected"> Nacionalidade  </option>
-                                            <%
-                                                NacionalidadeDAO nacio = new NacionalidadeDAO();
-                                                List<NacionalidadeModelo> lista = nacio.listarNacionalidade();
-                                                for ( NacionalidadeModelo nacionalidade : lista )
-                                                {
-                                             %>
-                                             
-                                             <option value=<%= nacionalidade.getPk_Nacionalidade()%>> <%= nacionalidade.getDescricao()%> 
-                                             
-                                             </option>
-                                             
-                                             <%}
-                                      %>
 
+ 
+                                      
+            <div class="page-content">
+		<div class="form-v10-content">
+			<form class="form-detail" action="#" method="post" id="myform">
+				
+				<div class="form-right">
+					<h2> Cadastro Realizador </h2>
+					
+				
+					<div class="form-row">
+						<select name="pais">
+                                                    <%
+                                                        PessoaDAO pessoaDAO = new PessoaDAO();
+                                                        List<PessoaModelo> listaP = pessoaDAO.listar_pessoa();
+                                                        for ( PessoaModelo pessoa : listaP)
+                                                        {
+                                                      %> 
+                                                      
+                                                      <option value=<%=pessoa.getPk_pessoa()%>> <%= pessoa.getPrimeiro_nome() + pessoa.getUltimo_nome() %> </option>
+                                                      
+                                                      <%}
 
-
-                                        </select>
-                                        <div class="select-dropdown"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>   
-                 
-                                       
-                       <button type="submit" class="button" onload="salvou()">
-	                   <span class="submit">Cadastrar</span>
-	                   <span class="loading"><i class="fa fa-refresh"></i></span>
-	                   <span class="check"><i class="fa fa-check"></i></span>
-                           
-                       </button>
-                                                                        
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+                                                     %>   
+						</select>
+						<span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+		
+					<div class="form-row-last">
+						<input type="submit" name="register" class="register" value="Register Badge">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
 
   </main> 
                                      
  </div>            
-     <!-- Jquery JS-->
-     <script src="_assets/vendor/jquery/jquery.min.js"></script>
-    <!-- Vendor JS-->
-    <script src="_assets/vendor/select2/select2.min.js"></script>
-    <script src="_assets/vendor//datepicker/moment.min.js"></script>
-    <script src="_assets/vendor//datepicker/daterangepicker.js"></script>
-
-    <!-- Main JS-->
-    <script src="_js/global.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    
-    <script>
-        
-        function salvou(){
-            swal({
-                  title: "Cadastrado com sucesso !",
-                  text: "Nova pessoa cadastrada!!",
-                   icon: "success",
-                   button: "Fechar!",
-                    onBeforeOpen: () => {
-                    Swal.showLoading()
-                },
-});
-        }
-   
-    </script>   
+     
     
     
                                 
