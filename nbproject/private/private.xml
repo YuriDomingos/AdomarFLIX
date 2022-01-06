@@ -3,14 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/yuri/NetBeansProjects/Projecto_final_SP1/web/_web/_webpage/pessoa/CadastrarPessoa.jsp</file>
-            <file>file:/home/yuri/NetBeansProjects/Projecto_final_SP1/web/_web/_webpage/actores/actor.jsp</file>
-            <file>file:/home/yuri/NetBeansProjects/Projecto_final_SP1/src/java/ucan/utils/Conexao.java</file>
-            <file>file:/home/yuri/NetBeansProjects/Projecto_final_SP1/web/_web/_webpage/pessoa/pessoas.jsp</file>
-            <file>file:/home/yuri/NetBeansProjects/Projecto_final_SP1/src/java/ucan/servlets/ActorServlet.java</file>
-            <file>file:/home/yuri/NetBeansProjects/Projecto_final_SP1/web/_web/_webpage/Socios/socios.jsp</file>
-            <file>file:/home/yuri/NetBeansProjects/Projecto_final_SP1/web/index.jsp</file>
-            <file>file:/home/yuri/NetBeansProjects/Projecto_final_SP1/web/header.jsp</file>
+            <file>file:/home/yuri/NetBeansProjects/YuriDomingos21711/web/CadastrarRealizador.jsp</file>
+            <file>file:/home/yuri/NetBeansProjects/YuriDomingos21711/src/java/ucan/servlets/CadastrarSocio.java</file>
+            <file>file:/home/yuri/NetBeansProjects/YuriDomingos21711/src/java/ucan/dao/AluguerModeloDAO.java</file>
+            <file>file:/home/yuri/NetBeansProjects/YuriDomingos21711/web/CadastrarPessoa.jsp</file>
+            <file>file:/home/yuri/NetBeansProjects/YuriDomingos21711/web/_css/index.css</file>
+            <file>file:/home/yuri/NetBeansProjects/YuriDomingos21711/web/index.jsp</file>
+            <file>file:/home/yuri/NetBeansProjects/YuriDomingos21711/src/java/ucan/modelo/AluguerModelo.java</file>
+            <file>file:/home/yuri/NetBeansProjects/YuriDomingos21711/src/java/ucan/servlets/CadastroFilme.java</file>
+            <file>file:/home/yuri/NetBeansProjects/YuriDomingos21711/web/_css/style.css</file>
+            <file>file:/home/yuri/NetBeansProjects/YuriDomingos21711/web/Aluguers.jsp</file>
+            <file>file:/home/yuri/NetBeansProjects/YuriDomingos21711/web/socios.jsp</file>
+            <file>file:/home/yuri/NetBeansProjects/YuriDomingos21711/web/_css/cadastrarPessoa.css</file>
+            <file>file:/home/yuri/NetBeansProjects/YuriDomingos21711/web/pessoas.jsp</file>
+            <file>file:/home/yuri/NetBeansProjects/YuriDomingos21711/src/java/ucan/servlets/CadastrarRealizador.java</file>
+            <file>file:/home/yuri/NetBeansProjects/YuriDomingos21711/web/realizador.jsp</file>
         </group>
     </open-files>
 </project-private>
