@@ -15,23 +15,25 @@ import java.sql.Date;
  */
 public class PessoaModelo {
     
-    private int pk_pessoa,fk_sexo,fk_estado_civil,fk_morada,telefone;
-    private String Primeiro_nome, Ultimo_nome,numero_bi,email;
+    private int pk_pessoa,fk_sexo,fk_estado_civil,fk_morada,telefone, fk_nacionalidade;
+    private String Primeiro_nome, Ultimo_nome,numero_bi,email, nacionalidade;
     private Date data_nasc;
 
     public PessoaModelo() {
     }
 
-    public PessoaModelo(int pk_pessoa, int fk_sexo, int fk_estado_civil, int fk_morada, int telefone, String Primeiro_nome, String Ultimo_nome, String numero_bi, String email, Date data_nasc) {
+    public PessoaModelo(int pk_pessoa, int fk_sexo, int fk_estado_civil, int fk_morada, int telefone, int fk_nacionalidade, String Primeiro_nome, String Ultimo_nome, String numero_bi, String email, String nacionalidade, Date data_nasc) {
         this.pk_pessoa = pk_pessoa;
         this.fk_sexo = fk_sexo;
         this.fk_estado_civil = fk_estado_civil;
         this.fk_morada = fk_morada;
         this.telefone = telefone;
+        this.fk_nacionalidade = fk_nacionalidade;
         this.Primeiro_nome = Primeiro_nome;
         this.Ultimo_nome = Ultimo_nome;
         this.numero_bi = numero_bi;
         this.email = email;
+        this.nacionalidade = nacionalidade;
         this.data_nasc = data_nasc;
     }
 
@@ -75,6 +77,14 @@ public class PessoaModelo {
         this.telefone = telefone;
     }
 
+    public int getFk_nacionalidade() {
+        return fk_nacionalidade;
+    }
+
+    public void setFk_nacionalidade(int fk_nacionalidade) {
+        this.fk_nacionalidade = fk_nacionalidade;
+    }
+
     public String getPrimeiro_nome() {
         return Primeiro_nome;
     }
@@ -107,6 +117,14 @@ public class PessoaModelo {
         this.email = email;
     }
 
+    public String getNacionalidade() {
+        return nacionalidade;
+    }
+
+    public void setNacionalidade(String nacionalidade) {
+        this.nacionalidade = nacionalidade;
+    }
+
     public Date getData_nasc() {
         return data_nasc;
     }
@@ -115,10 +133,6 @@ public class PessoaModelo {
         this.data_nasc = data_nasc;
     }
 
-   
-    
-  
-    
     
     
 }

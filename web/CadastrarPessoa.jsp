@@ -4,6 +4,8 @@
     Author     : Yuri Domingos 
 --%>
 
+<%@page import="ucan.modelo.NacionalidadeModelo"%>
+<%@page import="ucan.dao.NacionalidadeDAO"%>
 <%@page import="ucan.modelo.MoradaModelo"%>
 <%@page import="ucan.dao.MoradaDAO"%>
 <%@page import="ucan.modelo.EstadoCivilModelo"%>
@@ -165,9 +167,31 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="input-group">
-                            <div class="rs-select2 js-select-simple select--no-search">
+                      <div class="row row-space">
+                            <div class="col-2">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="Nacionalidade">
+                                    <option disabled="disabled" selected="selected">Nacionalidade</option>
+                                    <%
+                                        NacionalidadeDAO nacioAO = new NacionalidadeDAO();
+                                        List<NacionalidadeModelo>  listaNacio = nacioAO.listarNacionalidade();
+                                        for (NacionalidadeModelo nacionalidade : listaNacio)
+                                        {
+                                        %>
+                                        <option value=<%= nacionalidade.getPk_Nacionalidade() %>>  <%= nacionalidade.getDescricao()  %> </option>
+                                        
+                                        <%}
+                                            
+                                           
+
+                                        %>
+                                        
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                            </div>
+                            <div class="col-2">
+                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="Morada">
                                     <option disabled="disabled" selected="selected">Morada</option>
                                     <%
@@ -188,9 +212,12 @@
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
+                            </div>
                         </div>
+                        
+                        
                                        
-                                       <button type="submit" class="button" onload="salvou()">
+                       <button type="submit" class="button" onload="salvou()">
 	                   <span class="submit">Cadastrar</span>
 	                   <span class="loading"><i class="fa fa-refresh"></i></span>
 	                   <span class="check"><i class="fa fa-check"></i></span>

@@ -102,15 +102,15 @@
                                 <thead>
                                     <tr>
                                         <td> Id Pessoa </td>
-                                        <td> Primeiro Nome </td>
-                                        <td> Ultimo Nome</td>
+                                        <td>Nome completo </td>
                                         <td> Nº Bilhete </td>
-                                        <td> Data nascimento </td>
+                                        <td> Data nasc </td>
                                         <td> sexo </td>
                                         <td> Estado Civil </td>
                                          <td> Email </td>
                                         <td> Telefone</td>
                                         <td> Morada </td>
+                                        <td> Nacionalidade </td>
                                          
                                     </tr>
                                 </thead>
@@ -121,13 +121,13 @@
                                    List<PessoaModelo> lista = pessoaDAO.listar_pessoa();
                                    for (PessoaModelo pessoa : lista)
                                    {
+                                       System.out.println(pessoa.getPk_pessoa());
                                  %>
   
                                 <tbody>
                                     <tr>
                                         <td> <%= pessoa.getPk_pessoa() %> </td>
-                                        <td> <%= pessoa.getPrimeiro_nome() %> </td>
-                                        <td> <%= pessoa.getUltimo_nome() %> </td>
+                                        <td> <%= pessoa.getPrimeiro_nome() +" " +pessoa.getUltimo_nome() %> </td>
                                         <td> <%= pessoa.getNumero_bi() %> </td>
                                         <td> <%= pessoa.getData_nasc() %></td>
                                         <td> <%= pessoa.getFk_sexo() %> </td>
@@ -135,6 +135,7 @@
                                         <td> <%= pessoa.getEmail() %> </td>
                                         <td> <%= pessoa.getTelefone() %> </td>
                                         <td> <%= pessoa.getFk_morada() %> </td>
+                                         <td> <%= pessoa.getFk_nacionalidade() %> </td>
                                         <td>
                                             <a class="icon1" > <img  src="_assets/editar.png"  class="icon" alt="Error while was loading"> </a> 
                                         </td>

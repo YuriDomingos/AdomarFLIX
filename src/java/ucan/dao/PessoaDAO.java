@@ -25,7 +25,7 @@ public class PessoaDAO {
     public boolean SalvarPessoa(PessoaModelo modelo)
     {
         
-        String query_insert = "INSERT INTO public.pessoa VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?::date);";
+        String query_insert = "INSERT INTO public.pessoa VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?::date,?);";
         
         try{
             
@@ -40,6 +40,7 @@ public class PessoaDAO {
                ps.setInt(7, modelo.getTelefone());
                ps.setInt(8, modelo.getFk_morada());
                ps.setDate(9, modelo.getData_nasc());
+               ps.setInt(10, modelo.getFk_nacionalidade());
                ps.executeUpdate();
                System.out.println("Inserido com sucesso");
                ps.close();
@@ -89,6 +90,7 @@ public class PessoaDAO {
                 modelo.setTelefone(rs.getInt(8));
                 modelo.setFk_morada(rs.getInt(9));
                 modelo.setData_nasc(rs.getDate(10));
+                modelo.setFk_nacionalidade(rs.getInt(11));
                 lista.add(modelo);
             }
     
