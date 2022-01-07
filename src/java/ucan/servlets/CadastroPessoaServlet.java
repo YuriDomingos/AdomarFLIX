@@ -57,10 +57,10 @@ public class CadastroPessoaServlet extends HttpServlet {
         pessoa.setFk_sexo(Integer.parseInt(request.getParameter("sexo").trim()));       
         pessoa.setFk_estado_civil(Integer.parseInt(request.getParameter("estado_civil").trim()));       
         pessoa.setEmail(request.getParameter("email").trim());      
-        pessoa.setTelefone(Integer.parseInt(request.getParameter("numero").trim()));     
-        pessoa.setFk_morada(Integer.parseInt(request.getParameter("Morada").trim()));       
+        pessoa.setTelefone(Integer.parseInt(request.getParameter("numero").trim()));      
         pessoa.setData_nasc(TratamentoDeDatas.converterDataNormalParaDataSQL(request.getParameter("Dnascimento").trim()));
         pessoa.setFk_nacionalidade(Integer.parseInt(request.getParameter("Nacionalidade")));
+        pessoa.setFk_comuna(Integer.parseInt(request.getParameter("").trim()));
         
         PessoaDAO pessoaDAO = new PessoaDAO();
         

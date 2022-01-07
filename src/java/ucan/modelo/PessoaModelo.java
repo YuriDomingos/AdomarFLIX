@@ -15,26 +15,11 @@ import java.sql.Date;
  */
 public class PessoaModelo {
     
-    private int pk_pessoa,fk_sexo,fk_estado_civil,fk_morada,telefone, fk_nacionalidade;
-    private String Primeiro_nome, Ultimo_nome,numero_bi,email, nacionalidade;
+    private int pk_pessoa,fk_sexo,fk_estado_civil,fk_comuna,telefone, fk_nacionalidade;
+    private String Primeiro_nome, Ultimo_nome,numero_bi,email, nacionalidade, estado_civil_desc, sexo_descricao, comuna_descr;
     private Date data_nasc;
 
     public PessoaModelo() {
-    }
-
-    public PessoaModelo(int pk_pessoa, int fk_sexo, int fk_estado_civil, int fk_morada, int telefone, int fk_nacionalidade, String Primeiro_nome, String Ultimo_nome, String numero_bi, String email, String nacionalidade, Date data_nasc) {
-        this.pk_pessoa = pk_pessoa;
-        this.fk_sexo = fk_sexo;
-        this.fk_estado_civil = fk_estado_civil;
-        this.fk_morada = fk_morada;
-        this.telefone = telefone;
-        this.fk_nacionalidade = fk_nacionalidade;
-        this.Primeiro_nome = Primeiro_nome;
-        this.Ultimo_nome = Ultimo_nome;
-        this.numero_bi = numero_bi;
-        this.email = email;
-        this.nacionalidade = nacionalidade;
-        this.data_nasc = data_nasc;
     }
 
     public int getPk_pessoa() {
@@ -61,12 +46,12 @@ public class PessoaModelo {
         this.fk_estado_civil = fk_estado_civil;
     }
 
-    public int getFk_morada() {
-        return fk_morada;
+    public int getFk_comuna() {
+        return fk_comuna;
     }
 
-    public void setFk_morada(int fk_morada) {
-        this.fk_morada = fk_morada;
+    public void setFk_comuna(int fk_comuna) {
+        this.fk_comuna = fk_comuna;
     }
 
     public int getTelefone() {
@@ -125,6 +110,30 @@ public class PessoaModelo {
         this.nacionalidade = nacionalidade;
     }
 
+    public String getEstado_civil_desc() {
+        return estado_civil_desc;
+    }
+
+    public void setEstado_civil_desc(String estado_civil_desc) {
+        this.estado_civil_desc = estado_civil_desc;
+    }
+
+    public String getSexo_descricao() {
+        return sexo_descricao;
+    }
+
+    public void setSexo_descricao(String sexo_descricao) {
+        this.sexo_descricao = sexo_descricao;
+    }
+
+    public String getComuna_descr() {
+        return comuna_descr;
+    }
+
+    public void setComuna_descr(String comuna_descr) {
+        this.comuna_descr = comuna_descr;
+    }
+
     public Date getData_nasc() {
         return data_nasc;
     }
@@ -133,6 +142,7 @@ public class PessoaModelo {
         this.data_nasc = data_nasc;
     }
 
+    
     
     
 }

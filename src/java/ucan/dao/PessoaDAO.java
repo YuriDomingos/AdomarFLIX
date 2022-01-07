@@ -38,9 +38,9 @@ public class PessoaDAO {
                ps.setInt(5, modelo.getFk_estado_civil());
                ps.setString(6, modelo.getEmail());
                ps.setInt(7, modelo.getTelefone());
-               ps.setInt(8, modelo.getFk_morada());
-               ps.setDate(9, modelo.getData_nasc());
-               ps.setInt(10, modelo.getFk_nacionalidade());
+               ps.setDate(8, modelo.getData_nasc());
+               ps.setInt(9, modelo.getFk_nacionalidade());
+               ps.setInt(10, modelo.getFk_comuna());
                ps.executeUpdate();
                System.out.println("Inserido com sucesso");
                ps.close();
@@ -88,9 +88,9 @@ public class PessoaDAO {
                 modelo.setFk_estado_civil(rs.getInt(6));
                 modelo.setEmail(rs.getString(7));
                 modelo.setTelefone(rs.getInt(8));
-                modelo.setFk_morada(rs.getInt(9));
-                modelo.setData_nasc(rs.getDate(10));
-                modelo.setFk_nacionalidade(rs.getInt(11));
+                modelo.setData_nasc(rs.getDate(9));
+                modelo.setFk_nacionalidade(rs.getInt(10));
+                modelo.setFk_comuna(rs.getInt(11));
                 lista.add(modelo);
             }
     
