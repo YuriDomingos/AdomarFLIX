@@ -116,7 +116,7 @@
                                         <td><%= filme.getClassificacao() %> </td>
                                         <td><%= filme.getFn()+ " " + filme.getLn() %> </td>
                                         <td><%= filme.getDuracao()%> </td>
-                                        <td><img src="_assets/filmes/<%=filme.getUrl_imagem() %>"/> </td>
+                                        <td><img src='_assets/filmes/'<%=filme.getUrl_imagem() %>/> </td>
                                         
                                        
                                         <td>

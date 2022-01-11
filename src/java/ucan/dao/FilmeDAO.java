@@ -102,6 +102,43 @@ public class FilmeDAO
     }
     
     
+    public ArrayList<FilmeModelo> listar_filmes_recentes()
+    {
+        ArrayList<FilmeModelo> lista_tmp = new ArrayList<>();
+        
+        String query = "SELECT titulo_portugues, g.descricao, c.descricao, duracao\n" +
+                              "FROM public.filme INNER JOIN genero_filme g ON ( g.pk_genero = filme.fk_genero) \n" +
+                              "INNER JOIN classificao_filme c ON (c.pk_classificacao = filme.fk_classificacao) \n" +
+                              " ORDER BY pk_filme desc limit 3;";
+        
+        try
+        {
+            
+            Connection con = Conexao.abrirConexao();
+            PreparedStatement ps = con.prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+            
+            while ( rs.next())
+            {
+                FilmeModelo filmeModelo = new FilmeModelo();
+                filmeModelo.setTitulo_portugues(rs.getString(1));
+                filmeModelo.setGenero(rs.getString(2));
+                filmeModelo.setClassificacao(rs.getString(3));
+                filmeModelo.setDuracao(rs.getString(4));
+                
+                lista_tmp.add(filmeModelo);
+            }
+            
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("Erro ao fazer listagem dos filmes recentes "+ex.toString());
+        }
+        
+        return lista_tmp;
+    }
+    
+    
     public ArrayList<FilmeModelo> listarFilmes()
     {
         

@@ -1,3 +1,6 @@
+<%@page import="java.util.List"%>
+<%@page import="ucan.dao.FilmeDAO"%>
+<%@page import="ucan.modelo.FilmeModelo"%>
 <%@page import="ucan.utils.Conexao"%>
 <!DOCTYPE html>
 <!--
@@ -109,28 +112,29 @@ and open the template in the editor.
                                         <td> Classificação</td>
                                     </tr>
                                 </thead>
+                                
+                                <%
+                                    FilmeDAO filme = new FilmeDAO();
+                                    List<FilmeModelo> lista_tmp = filme.listar_filmes_recentes();
+                                    for ( FilmeModelo filmeM : lista_tmp)
+                                    {
+                                        
+                              
+                                    
+                                 %>
                                 <tbody>
+                                    
                                     <tr>
-                                        <td> Mercenários </td>
-                                        <td> Ação</td>
+                                        <td> <%=filmeM.getTitulo_portugues()%> </td>
+                                        <td> <%=filmeM.getGenero() %> </td>
+                                        <td> <%=filmeM.getClassificacao() %> </td>
+                                        <td> <%=filmeM.getDuracao() %> </td>
+                                        
                                         <td>
                                             <span class="status"> </span> Disponível
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td> Desde que chegaste </td>
-                                        <td> Romance </td>
-                                        <td>
-                                            <span class="status"> </span> Indisponível
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td> Todo poderoso </td>
-                                        <td> Comédia </td>
-                                        <td>
-                                            <span class="status"> </span> Comédia
-                                        </td>
-                                    </tr>
+                                    
                                 </tbody>
                             </table>
                         </div>
