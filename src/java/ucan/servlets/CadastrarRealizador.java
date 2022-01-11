@@ -36,7 +36,7 @@ public class CadastrarRealizador extends HttpServlet {
             throws ServletException, IOException {
         
         
-     RealizadorDAO.cadastrarRealizador(Integer.parseInt(request.getParameter("fk_pessoa")), Integer.parseInt(request.getParameter("fk_nacionalidade")));
+     RealizadorDAO.cadastrarRealizador(Integer.parseInt(request.getParameter("fk_pessoa"));
       request.getRequestDispatcher("realizador.jsp").forward(request, response);
         
     }

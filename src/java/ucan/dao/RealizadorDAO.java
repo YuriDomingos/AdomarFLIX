@@ -23,9 +23,9 @@ public class RealizadorDAO {
     
     
     
-    public static boolean cadastrarRealizador(int fk_pessoa, int fk_nacionalidade)
+    public static boolean cadastrarRealizador(int fk_pessoa)
     {
-        String insert = "INSERT INTO public.realizador VALUES (DEFAULT, ?, ?);";
+        String insert = "INSERT INTO public.realizador VALUES (DEFAULT,?);";
         
         try
         {
@@ -33,7 +33,6 @@ public class RealizadorDAO {
             PreparedStatement ps = con.prepareStatement(insert);
             
             ps.setInt(1, fk_pessoa);
-            ps.setInt(2, fk_nacionalidade);
             ps.execute();
             ps.close();
             

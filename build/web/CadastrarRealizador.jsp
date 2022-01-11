@@ -81,7 +81,7 @@
                                       
             <div class="page-content">
 		<div class="form-v10-content">
-			<form class="form-detail" action="#" method="post" id="myform">
+			<form class="form-detail" action="CadastrarRealizador" method="post" id="myform">
 				
 				<div class="form-right">
 					<h2> Cadastro Realizador </h2>
