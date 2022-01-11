@@ -109,8 +109,8 @@
                                         <td> Estado Civil </td>
                                          <td> Email </td>
                                         <td> Telefone</td>
-                                        <td> Morada </td>
                                         <td> Nacionalidade </td>
+                                        <td> Morada </td>
                                          
                                     </tr>
                                 </thead>
@@ -118,7 +118,7 @@
                                 <%
                                  
                                    PessoaDAO pessoaDAO = new PessoaDAO();
-                                   List<PessoaModelo> lista = pessoaDAO.listar_pessoa();
+                                   List<PessoaModelo> lista = pessoaDAO.listagem_principal();
                                    for (PessoaModelo pessoa : lista)
                                    {
                                        System.out.println(pessoa.getPk_pessoa());
@@ -130,11 +130,12 @@
                                         <td> <%= pessoa.getPrimeiro_nome() +" " +pessoa.getUltimo_nome() %> </td>
                                         <td> <%= pessoa.getNumero_bi() %> </td>
                                         <td> <%= pessoa.getData_nasc() %></td>
-                                        <td> <%= pessoa.getFk_sexo() %> </td>
-                                        <td> <%= pessoa.getFk_estado_civil() %> </td>
+                                        <td> <%= pessoa.getSexo_descricao() %> </td>
+                                        <td> <%= pessoa.getEstado_civil_desc() %> </td>
                                         <td> <%= pessoa.getEmail() %> </td>
                                         <td> <%= pessoa.getTelefone() %> </td>                                    
-                                         <td> <%= pessoa.getFk_nacionalidade() %> </td>
+                                         <td> <%= pessoa.getNacionalidade() %> </td>
+                                         <td> <%= pessoa.getComuna_descr() %></td>
                                         <td>
                                             <a class="icon1" > <img  src="_assets/editar.png"  class="icon" alt="Error while was loading"> </a> 
                                         </td>

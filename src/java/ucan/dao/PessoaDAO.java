@@ -70,8 +70,8 @@ public class PessoaDAO {
         ArrayList<PessoaModelo> lista_tmp = new ArrayList<>();
         
         String query = "SELECT pk_pessoa, primeiro_nome, ultimo_nome, numero_bi, s.descricao, e.descricao, email, telefone, data_nasc, n.descricao, c.descricao \n" +
-"	                        FROM public.pessoa INNER JOIN sexo s ON ( pessoa.fk_sexo = s.pk_sexo)"
-                                 +"INNER JOIN estado_civil e ON ( pessoa.fk_estado_civil = e.pk_estado_civil)\n" +
+                                 "FROM public.pessoa INNER JOIN sexo s ON ( pessoa.fk_sexo = s.pk_sexo)"
+                                +"INNER JOIN estado_civil e ON ( pessoa.fk_estado_civil = e.pk_estado_civil)\n" +
                                  "INNER JOIN nacionalidade n ON (pessoa.fk_nacionalidade = n.pk_nacionalidade) "
                                 +"INNER JOIN comuna c ON ( pessoa.fk_comuna = c.pk_comuna);";
         
@@ -83,6 +83,22 @@ public class PessoaDAO {
             
             while ( rs.next())
             {
+              
+                PessoaModelo modelo = new PessoaModelo();
+                
+                modelo.setPk_pessoa(rs.getInt(1));
+                modelo.setPrimeiro_nome(rs.getString(2));
+                modelo.setUltimo_nome(rs.getString(3));
+                modelo.setNumero_bi(rs.getString(4));
+                modelo.setSexo_descricao(rs.getString(5));
+                modelo.setEstado_civil_desc(rs.getString(6));
+                modelo.setEmail(rs.getString(7));
+                modelo.setTelefone(rs.getInt(8));
+                modelo.setData_nasc(rs.getDate(9));
+                modelo.setNacionalidade(rs.getString(10));
+                modelo.setComuna_descr(rs.getString(11));
+                
+                lista_tmp.add(modelo);
                 
             }
         }
