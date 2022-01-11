@@ -23,10 +23,11 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
     <!-- Vendor CSS-->
-    <link href="_assets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+
     <link href="_assets/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="_css/index.css" />
     <link rel="stylesheet" href="_css/pessoa.css"/>
+    <link rel="stylesheet" href="_css/cadastrarPessoa.css"/>
     
     <!-- Vamos adicionar um awesome basico  do cdn do texto-->
     <title>Actores </title>
@@ -141,7 +142,7 @@
      <!-- Jquery JS-->
      <script src="_assets/vendor/jquery/jquery.min.js"></script>
     <!-- Vendor JS-->
-    <script src="_assets/vendor/select2/select2.min.js"></script>
+  
     <script src="_assets/vendor//datepicker/moment.min.js"></script>
     <script src="_assets/vendor//datepicker/daterangepicker.js"></script>
 
