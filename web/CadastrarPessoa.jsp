@@ -4,10 +4,11 @@
     Author     : Yuri Domingos 
 --%>
 
+<%@page import="ucan.dao.ComunaDAO"%>
+<%@page import="ucan.modelo.ComunaModelo"%>
 <%@page import="ucan.modelo.NacionalidadeModelo"%>
 <%@page import="ucan.dao.NacionalidadeDAO"%>
-<%@page import="ucan.modelo.MoradaModelo"%>
-<%@page import="ucan.dao.MoradaDAO"%>
+
 <%@page import="ucan.modelo.EstadoCivilModelo"%>
 <%@page import="ucan.dao.EstadoCivilDAO"%>
 <%@page import="java.util.List"%>
@@ -28,7 +29,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
     <!-- Vendor CSS-->
-    <link href="_assets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+   
     <link href="_assets/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="_css/index.css" />
     <link rel="stylesheet" href="_css/cadastrarPessoa.css"/>
@@ -192,22 +193,23 @@
                             </div>
                             <div class="col-2">
                              <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="Morada">
+                                <select name="comuna">
                                     <option disabled="disabled" selected="selected">Morada</option>
+                                    
                                     <%
-                                        MoradaDAO moradas = new MoradaDAO();
-                                        List<MoradaModelo> lista_morada = moradas.listar_moradas();
-                                        for ( MoradaModelo morada : lista_morada)
-                                        {
                                         
-                                        %>
-                                        <option value=<%= morada.getPk_moradaModelo()%>> <%= morada.getDescricao()%> </option>
+                                     ComunaDAO comunaDAO = new ComunaDAO();
+                                     List<ComunaModelo> listaR = comunaDAO.listarComunas();
+                                     for ( ComunaModelo comuna : listaR)
+                                     {
                                         
-                                        <%
-                                            
-                                           }
+                                     %>
+                                     
+                                     <option value=<%= comuna.getPk_comuna() %>> <%= comuna.getDescricao() %> </option>
+                                     
+                                     <%}
 
-                                        %>
+                                  %>
                                         
                                 </select>
                                 <div class="select-dropdown"></div>
@@ -244,7 +246,7 @@
      <!-- Jquery JS-->
      <script src="_assets/vendor/jquery/jquery.min.js"></script>
     <!-- Vendor JS-->
-    <script src="_assets/vendor/select2/select2.min.js"></script>
+    
     <script src="_assets/vendor//datepicker/moment.min.js"></script>
     <script src="_assets/vendor//datepicker/daterangepicker.js"></script>
 

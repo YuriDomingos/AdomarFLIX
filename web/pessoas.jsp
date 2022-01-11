@@ -133,8 +133,7 @@
                                         <td> <%= pessoa.getFk_sexo() %> </td>
                                         <td> <%= pessoa.getFk_estado_civil() %> </td>
                                         <td> <%= pessoa.getEmail() %> </td>
-                                        <td> <%= pessoa.getTelefone() %> </td>
-                                        <td> <%= pessoa.getFk_morada() %> </td>
+                                        <td> <%= pessoa.getTelefone() %> </td>                                    
                                          <td> <%= pessoa.getFk_nacionalidade() %> </td>
                                         <td>
                                             <a class="icon1" > <img  src="_assets/editar.png"  class="icon" alt="Error while was loading"> </a> 

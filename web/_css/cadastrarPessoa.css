@@ -251,7 +251,7 @@ input[type="date" i] {
 }
 
 .daterangepicker td {
-  width: 40px;
+  width: 80px;
   height: 30px;
 }
 
@@ -263,6 +263,7 @@ input[type="date" i] {
   display: none;
   border: 1px solid #e0e0e0;
   margin-top: 5px;
+  
 }
 
 .daterangepicker::after, .daterangepicker::before {
@@ -355,6 +356,15 @@ input {
   color: #808080;
 }
 
+
+select {
+    
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: gray;
+}
+
 /* ==========================================================================
    #SELECT2
    ========================================================================== */
@@ -363,14 +373,13 @@ input {
 }
 
 .rs-select2 .select2-container {
-  width: 100% !important;
-  outline: none;
+  width: 100% ;
+  
 }
 
 .rs-select2 .select2-container .select2-selection--single {
-  outline: none;
-  border: none;
-  height: 36px;
+ 
+  height: 136px;
 }
 
 .rs-select2 .select2-container .select2-selection--single .select2-selection__rendered {
@@ -426,7 +435,7 @@ input {
 }
 
 .select2-container--open .select2-dropdown--below {
-  border: none;
+    
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -434,7 +443,7 @@ input {
   -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   border: 1px solid #e0e0e0;
-  margin-top: 5px;
+ 
 
 }
 
@@ -500,6 +509,7 @@ input {
 
 
  .button {
+     
 	 position: relative;
 	 display: flex;
 	 flex-direction: column;
@@ -516,6 +526,7 @@ input {
 	 font-weight: 300;
 	 text-transform: uppercase;
 	 overflow: hidden;
+         margin-top: 40px;
 }
  .button:before {
 	 position: absolute;
