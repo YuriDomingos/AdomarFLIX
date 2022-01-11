@@ -10,8 +10,7 @@
 <%@page import="ucan.dao.RealizadorDAO"%>
 <%@page import="ucan.dao.GeneroFilmeDAO"%>
 <%@page import="ucan.modelo.GeneroFilmeModelo"%>
-<%@page import="ucan.modelo.MoradaModelo"%>
-<%@page import="ucan.dao.MoradaDAO"%>
+
 <%@page import="ucan.modelo.EstadoCivilModelo"%>
 <%@page import="ucan.modelo.EstadoCivilModelo"%>
 <%@page import="ucan.dao.EstadoCivilDAO"%>
