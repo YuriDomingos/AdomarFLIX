@@ -25,11 +25,7 @@
      <!-- Icons font CSS-->
     <link href="_assets/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="_assets/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
-    <!-- Vendor CSS-->
-   
     <link href="_assets/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="_css/index.css" />
     <link rel="stylesheet" href="_css/cadastrarPessoa.css"/>
@@ -46,30 +42,7 @@
             <h2> <span class="icon mencionado "></span> AdomarFlix </h2>
         </div>
 
-        <!-- Falta adicionar os icones  para cada options -->
-
-        <div class="sidebar-menu">
-            <ul>
-                <li> <a href="index.jsp" class="active"> <span> </span class="las la-igloo">
-                        <span> Dashboard </span> </a>
-                </li>
-                <li> <a href="pessoas.jsp"> <span> </span class="las la-igloo">
-                    <span> Pessoas </span> </a>
-                </li>
-                <li> <a href="filmes.jsp"> <span> </span class="las la-igloo">
-                        <span> Filmes </span> </a>
-                </li>
-                <li> <a href="actor.jsp"> <span> </span class="las la-igloo">
-                        <span> Actores </span> </a>
-                </li>
-                <li> <a href="socios.jsp"> <span> </span class="las la-igloo">
-                        <span> Sócios </span> </a>
-                </li>
-                <li> <a href="realizador.jsp"> <span> </span class="las la-igloo">
-                        <span> Realizadores </span> </a>
-                </li>
-            </ul>
-        </div>
+    <%@include file="MenuLateral.jsp" %>
 
     </div>
 
