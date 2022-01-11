@@ -25,7 +25,7 @@ public class SocioCategoriaDAO
     public ArrayList<SocioCategoriaModelo> listarCategoriaSocio()
     {
         ArrayList<SocioCategoriaModelo> lista_tmp = new ArrayList<>();
-        String query = "";
+        String query = "SELECT * FROM public.categoria_socio";
         
         try
         {

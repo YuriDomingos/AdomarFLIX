@@ -4,6 +4,8 @@
     Author     : Yuri Domingos
 --%>
 
+<%@page import="ucan.modelo.SocioCategoriaModelo"%>
+<%@page import="ucan.dao.SocioCategoriaDAO"%>
 <%@page import="ucan.modelo.NacionalidadeModelo"%>
 <%@page import="ucan.dao.NacionalidadeDAO"%>
 <%@page import="ucan.modelo.SexoModelo"%>
@@ -115,6 +117,14 @@
                                                <div class="form-row">
 						<select name="fk_nacionalidade ">
                                                     <option class="own"  disabled="disabled" selected="selected">Categoria </option>
+                                                    
+                                                    <%
+                                                        SocioCategoriaDAO lista_tmp = new SocioCategoriaDAO();
+                                                        List<SocioCategoriaModelo> lista_socios = lista_tmp.listarCategoriaSocio();
+                                                        
+                                                    %>
+                                                    
+                                                    <option value=<%= %>></option>
                                                     
                                                    
 						</select>
