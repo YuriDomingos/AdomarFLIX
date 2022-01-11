@@ -92,7 +92,7 @@
                                               <td>
                                                <div class="form-row">
 						<select name="fk_categoria">
-                                                    <option   disabled="disabled" selected="selected"> Selecione a categoria </option>
+                                                    <option   disabled="disabled" selected="selected"> Selecione o filme  </option>
                                                     
                                                     <%
                                                         SocioCategoriaDAO lista_tmp = new SocioCategoriaDAO();
