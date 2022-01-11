@@ -64,6 +64,35 @@ public class PessoaDAO {
     {
         return false;
     }
+    public ArrayList<PessoaModelo> listagem_principal()
+    {
+        
+        ArrayList<PessoaModelo> lista_tmp = new ArrayList<>();
+        
+        String query = "SELECT pk_pessoa, primeiro_nome, ultimo_nome, numero_bi, s.descricao, e.descricao, email, telefone, data_nasc, n.descricao, c.descricao \n" +
+"	                        FROM public.pessoa INNER JOIN sexo s ON ( pessoa.fk_sexo = s.pk_sexo)"
+                                 +"INNER JOIN estado_civil e ON ( pessoa.fk_estado_civil = e.pk_estado_civil)\n" +
+                                 "INNER JOIN nacionalidade n ON (pessoa.fk_nacionalidade = n.pk_nacionalidade) "
+                                +"INNER JOIN comuna c ON ( pessoa.fk_comuna = c.pk_comuna);";
+        
+        try
+        {
+            Connection con = Conexao.abrirConexao();
+            PreparedStatement ps = con.prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+            
+            while ( rs.next())
+            {
+                
+            }
+        }
+        catch(SQLException ex)
+        {
+            ex.printStackTrace();
+        }
+        
+        return lista_tmp;
+    }
     
     public ArrayList<PessoaModelo> listar_pessoa()
     {
