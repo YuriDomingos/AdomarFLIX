@@ -114,6 +114,7 @@
                                         <td><%= filme.getSinopse() %> </td>
                                         <td><%= filme.getGenero() %> </td>
                                         <td><%= filme.getClassificacao() %> </td>
+                                        <td><%= filme.getDuracao()%> </td>
                                         <td><img src="_assets/filmes/<%=filme.getUrl_imagem() %>"/> </td>
                                         
                                        
