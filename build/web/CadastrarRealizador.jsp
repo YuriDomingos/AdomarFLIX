@@ -39,12 +39,7 @@
 
     <div class="sidebar">
         
-        <div class="sidebar-logotipo">
-            <!-- No momento estamos com falta de icones então, depois vamos adinicionar   -->
-            <h2> <span class="icon mencionado "></span> AdomarFlix </h2>
-        </div>
-
-
+   <%@include  file="HeaderTitle.jsp" %>
    <%@include file="MenuLateral.jsp" %>
 
     </div>

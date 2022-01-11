@@ -46,8 +46,8 @@
             <h2> <span class="icon mencionado "></span> AdomarFlix </h2>
         </div>
 
-        <!-- Falta adicionar os icones  para cada options -->
         
+    <%@include  file="HeaderTitle.jsp" %>   
     <%@include file="MenuLateral.jsp" %>
 
     </div>

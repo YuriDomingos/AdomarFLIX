@@ -16,26 +16,21 @@
        <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Icons font CSS-->
 
     <link rel="stylesheet" href="_css/index.css" />
     <link rel="stylesheet" href="_css/Form_cadastro.css"/>
-      <link rel="stylesheet" href="_css/pessoa.css"/>
+    <link rel="stylesheet" href="_css/pessoa.css"/>
     
     <!-- Vamos adicionar um awesome basico  do cdn do texto-->
-    <title>Administrador</title>
+    <title>AdomarFlix</title>
 </head>
 
 <body>
 
     <div class="sidebar">
-        <div class="sidebar-logotipo">
-            <!-- No momento estamos com falta de icones então, depois vamos adinicionar   -->
-            <h2> <span class="icon mencionado "></span> AdomarMovies </h2>
-        </div>
-
-        <!-- Falta adicionar os icones  para cada options -->
-
+     
+        
+        <%@include  file="HeaderTitle.jsp" %>
         <%@include  file="MenuLateral.jsp" %>
 
     </div>
