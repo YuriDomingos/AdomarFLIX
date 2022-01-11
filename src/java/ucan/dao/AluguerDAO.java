@@ -22,6 +22,27 @@ import ucan.utils.Conexao;
 public class AluguerDAO 
 {
 
+    
+    public boolean cadastrarAluguer(AluguerModelo aluguerModelo)
+    {
+        
+        String insert = "INSERT INTO public.aluguer_filme(\n" +  "pk_aluguer_filme, data_aluguer, data_devolucao, fk_filme, fk_socio)\n" + "VALUES (?, ?, ?, ?, ?);";
+        
+        try
+        {
+            Connection con = Conexao.abrirConexao();
+            PreparedStatement ps = con.prepareStatement(insert);
+            
+            
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("Erro ao fazer cadastrar o emprestimo na base de dados " + ex.toString());
+        }
+        
+        
+        return false;
+    }
  
   public ArrayList<AluguerModelo > listarAluguerModelo()      
   {
