@@ -32,7 +32,7 @@
 
         <!-- Falta adicionar os icones  para cada options -->
 
-        <div class="sidebar-menu">
+       <div class="sidebar-menu">
             <ul>
                 <li> <a href="index.jsp" class="active"> <span> </span class="las la-igloo">
                         <span> Dashboard </span> </a>
@@ -43,7 +43,10 @@
                 <li> <a href="filmes.jsp"> <span> </span class="las la-igloo">
                         <span> Filmes </span> </a>
                 </li>
-                <li> <a href=""> <span> </span class="las la-igloo">
+                <li> <a href="Aluguers.jsp"> <span> </span class="las la-igloo">
+                        <span> Alugures </span> </a>
+                </li>
+                <li> <a href="actor.jsp"> <span> </span class="las la-igloo">
                         <span> Actores </span> </a>
                 </li>
                 <li> <a href="socios.jsp"> <span> </span class="las la-igloo">

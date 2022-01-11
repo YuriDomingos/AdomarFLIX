@@ -2,13 +2,8 @@
 <%@page import="ucan.dao.FilmeDAO"%>
 <%@page import="ucan.modelo.FilmeModelo"%>
 <%@page import="ucan.utils.Conexao"%>
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
+
+
 <html lang="pt-br">
 
 <head>
@@ -31,31 +26,7 @@ and open the template in the editor.
 
         <!-- Falta adicionar os icones  para cada options -->
 
-        <div class="sidebar-menu">
-            <ul>
-                <li> <a href="index.jsp" class="active"> <span> </span class="las la-igloo">
-                        <span> Dashboard </span> </a>
-                </li>
-                <li> <a href="pessoas.jsp"> <span> </span class="las la-igloo">
-                    <span> Pessoas </span> </a>
-                </li>
-                <li> <a href="filmes.jsp"> <span> </span class="las la-igloo">
-                        <span> Filmes </span> </a>
-                </li>
-                <li> <a href="Aluguers.jsp"> <span> </span class="las la-igloo">
-                        <span> Alugures </span> </a>
-                </li>
-                <li> <a href="actor.jsp"> <span> </span class="las la-igloo">
-                        <span> Actores </span> </a>
-                </li>
-                <li> <a href="socios.jsp"> <span> </span class="las la-igloo">
-                        <span> Sócios </span> </a>
-                </li>
-                <li> <a href="realizador.jsp"> <span> </span class="las la-igloo">
-                        <span> Realizadores </span> </a>
-                </li>
-            </ul>
-        </div>
+        <%@include file="MenuLateral.jsp" %>
 
     </div>
    
@@ -243,16 +214,6 @@ and open the template in the editor.
 
     </div>
             
-            <%
-                if ( Conexao.abrirConexao() != null )
-                {
-                    System.out.println(" Conectado com sucesso ");
-                }
-                else
-                {
-                    System.out.println("Erro ao conectar ");
-                }
-                %>
 </body>
 
 </html>
