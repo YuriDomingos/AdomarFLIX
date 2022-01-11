@@ -116,16 +116,20 @@
                                               <td>
                                                <div class="form-row">
 						<select name="fk_nacionalidade ">
-                                                    <option class="own"  disabled="disabled" selected="selected">Categoria </option>
+                                                    <option class="own"  disabled="disabled" selected="selected"> Selecione a categoria </option>
                                                     
                                                     <%
                                                         SocioCategoriaDAO lista_tmp = new SocioCategoriaDAO();
                                                         List<SocioCategoriaModelo> lista_socios = lista_tmp.listarCategoriaSocio();
+                                                        for ( SocioCategoriaModelo socio : lista_socios)
+                                                        {
                                                         
                                                     %>
                                                     
-                                                    <option value=<%= %>></option>
-                                                    
+                                                    <option value=<%=socio.getPk_socio_categoria() %>> <%= socio.getDescricao() %>  </option>
+                                                    <%}
+                                                   
+                                                     %>
                                                    
 						</select>
 						<span class="select-btn">
