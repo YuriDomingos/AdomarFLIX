@@ -69,7 +69,7 @@ public class SocioDAO
                 socioModelo.setPk_socio(rs.getInt(1));
                 socioModelo.setPrimeiro_nome(rs.getString(2));
                 socioModelo.setUltimo_nome(rs.getString(3));
-                socioModelo.setData_inicio(rs.getString(4));
+                socioModelo.setData_inicio(rs.getDate(4));
                 socioModelo.setCategoria_desc(rs.getString(5));
                 lista_socios.add(socioModelo);
             }

@@ -115,8 +115,8 @@
                                             </td>
                                               <td>
                                                <div class="form-row">
-						<select name="fk_categoria ">
-                                                    <option class="own"  disabled="disabled" selected="selected"> Selecione a categoria </option>
+						<select name="fk_categoria">
+                                                    <option   disabled="disabled" selected="selected"> Selecione a categoria </option>
                                                     
                                                     <%
                                                         SocioCategoriaDAO lista_tmp = new SocioCategoriaDAO();
