@@ -52,6 +52,40 @@ public class FilmeDAO
         return false;
     }
     
+    
+    public ArrayList<FilmeModelo> listagem_principal()
+    {
+        
+        ArrayList<FilmeModelo> lista_tmp = new ArrayList<>();
+        String query = "SELECT f.pk_filme, f.titulo_portugues, f.titulo_original, \"Sinopse\", g.descricao, c.descricao, p.primeiro_nome, "
+                + "                                                                            p.ultimo_nome, f.duracao, f.url_imagem\n" +
+                                      "FROM public.filme f "
+                
+                                    +" INNER JOIN genero_filme g ON (g.pk_genero = f.fk_genero)\n" +
+                                      "INNER JOIN classificao_filme c ON ( f.fk_classificacao = c.pk_classificacao) \n" +
+                                      "INNER JOIN realizador r ON (r.pk_realizador = f.fk_realizador)\n" +
+                                      "INNER JOIN pessoa p ON ( p.pk_pessoa = r.fk_pessoa);";
+        
+        try
+        {
+            Connection con = Conexao.abrirConexao();
+            PreparedStatement ps = con.prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+            
+            while ( rs.next())
+            {
+                
+            }
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("Erro ao listar "+ex.toString());
+        }
+        
+        return lista_tmp;
+    }
+    
+    
     public ArrayList<FilmeModelo> listarFilmes()
     {
         
