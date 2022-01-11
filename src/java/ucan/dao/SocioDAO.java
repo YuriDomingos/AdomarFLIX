@@ -27,7 +27,7 @@ public class SocioDAO
     
     public static boolean cadastrarSocio(int fk_pessoa, int fk_categoria_socio)
     {
-      String inserir = "INSERT INTO socio VALUES (default,?,?)";
+      String inserir = "INSERT INTO socio VALUES (default,?,DEFAULT,?)";
       
       try
       {
@@ -53,9 +53,10 @@ public class SocioDAO
         
         ArrayList<SocioModelo> lista_socios = new ArrayList<SocioModelo>();
         
-        String query = "select p.pk_pessoa, p.primeiro_nome, p.ultimo_nome, date(s.data_inicio)"
-                
-                                           + " from pessoa p INNER JOIN socio s ON (p.pk_pessoa = s.fk_pessoa);";  
+        String query = "select p.pk_pessoa, p.primeiro_nome, p.ultimo_nome, date(s.data_inicio), cs.descricao \n" +
+                                     " \n" +
+                                     "  from pessoa p INNER JOIN socio s ON (p.pk_pessoa = s.fk_pessoa) \n" +
+                                     "  INNER JOIN categoria_socio cs ON (cs.pk_categoria_socio = s.fk_categoria_socio )";
         try
         {
             Connection con = Conexao.abrirConexao();
@@ -69,7 +70,7 @@ public class SocioDAO
                 socioModelo.setPk_socio(rs.getInt(1));
                 socioModelo.setPrimeiro_nome(rs.getString(2));
                 socioModelo.setUltimo_nome(rs.getString(3));
-                socioModelo.setData_inicio(rs.getDate(4));
+                socioModelo.setData_inicio(rs.getString(4));
                 socioModelo.setCategoria_desc(rs.getString(5));
                 lista_socios.add(socioModelo);
             }

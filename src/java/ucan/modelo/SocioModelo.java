@@ -5,8 +5,6 @@
  */
 package ucan.modelo;
 
-import java.sql.Date;
-
 /**
  *
  * @author Yuri Domingos
@@ -15,12 +13,12 @@ public class SocioModelo
 {
     private int pk_socio;
     private String Primeiro_nome, ultimo_nome, categoria_desc;
-    private Date data_inicio;
+    private String data_inicio;
 
     public SocioModelo() {
     }
 
-    public SocioModelo(int pk_socio, String Primeiro_nome, String ultimo_nome, String categoria_desc, Date data_inicio) {
+    public SocioModelo(int pk_socio, String Primeiro_nome, String ultimo_nome, String categoria_desc, String data_inicio) {
         this.pk_socio = pk_socio;
         this.Primeiro_nome = Primeiro_nome;
         this.ultimo_nome = ultimo_nome;
@@ -60,16 +58,13 @@ public class SocioModelo
         this.categoria_desc = categoria_desc;
     }
 
-    public Date getData_inicio() {
+    public String getData_inicio() {
         return data_inicio;
     }
 
-    public void setData_inicio(Date data_inicio) {
+    public void setData_inicio(String data_inicio) {
         this.data_inicio = data_inicio;
     }
-
-    
-    
 
     
 }
