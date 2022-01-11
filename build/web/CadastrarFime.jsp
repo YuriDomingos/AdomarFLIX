@@ -10,7 +10,6 @@
 <%@page import="ucan.dao.RealizadorDAO"%>
 <%@page import="ucan.dao.GeneroFilmeDAO"%>
 <%@page import="ucan.modelo.GeneroFilmeModelo"%>
-
 <%@page import="ucan.modelo.EstadoCivilModelo"%>
 <%@page import="ucan.modelo.EstadoCivilModelo"%>
 <%@page import="ucan.dao.EstadoCivilDAO"%>
@@ -30,7 +29,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
     <!-- Vendor CSS-->
-    <link href="_assets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+
     <link href="_assets/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="_css/index.css" />
     <link rel="stylesheet" href="_css/cadastrarPessoa.css"/>
@@ -177,7 +176,7 @@
                                         {
                                         
                                         %>
-                                        <option value=<%= realizadorLista.getPk_Realizador()%>> <%= realizadorLista.getPrimeiro_nome() 
+                                        <option value=<%= realizadorLista.getPk_Realizador()%>> <%= realizadorLista.getPrimeiro_nome() + " " 
                                                                                                     + realizadorLista.getUltimo_nome() %> 
                                         </option>
                                         
@@ -221,7 +220,7 @@
      <!-- Jquery JS-->
      <script src="_assets/vendor/jquery/jquery.min.js"></script>
     <!-- Vendor JS-->
-    <script src="_assets/vendor/select2/select2.min.js"></script>
+ 
     <script src="_assets/vendor//datepicker/moment.min.js"></script>
     <script src="_assets/vendor//datepicker/daterangepicker.js"></script>
 

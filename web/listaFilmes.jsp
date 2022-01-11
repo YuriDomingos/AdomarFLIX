@@ -85,10 +85,15 @@
                                 <thead>
                                     <tr>
                                         
-                                        <td> Id Socio </td>
-                                        <td> Primeiro Nome </td>
-                                        <td> Ultimo Nome</td>
-                                        <td> Data de inicio  </td>       
+                                        <td> Id Filme </td>
+                                        <td> Titulo português </td>
+                                        <td> Titulo original </td>
+                                        <td> Sinopse </td>
+                                        <td> Genero </td>       
+                                        <td> Classificação </td>       
+                                        <td> Realizador</td>       
+                                        <td> Duracao </td>       
+                                        <td> Imagem </td>       
                                         
                                     </tr>
                                 </thead>
@@ -102,6 +107,13 @@
   
                                 <tbody>
                                     <tr>
+                                        
+                                        <td><%= filme.getPk_filme() %></td>
+                                        <td><%= filme.getTitulo_portugues() %> </td>
+                                        <td><%= filme.getTitulo_original() %> </td>
+                                        <td><%= filme.getSinopse() %> </td>
+                                        <td><%= filme.getGenero() %> </td>
+                                        <td><%= filme.getClassificacao() %> </td>
                                         <td><img src="_assets/filmes/<%=filme.getUrl_imagem() %>"/> </td>
                                         
                                        
