@@ -81,12 +81,12 @@
                                       
             <div class="page-content">
 		<div class="form-v10-content">
-			<form class="form-detail" action="CadastrarActor" method="post" id="myform">
+			<form class="form-detail" action="CadastrarSocio" method="post" id="myform">
 				
                             <table>
                                 
                                 <div class="form-right">
-                                    <h2> Cadastro </h2>
+                                    <h2 style="text-align: center"> Cadastro Sóocio </h2>
 					
                                         <tr>
                                             <td>
@@ -113,8 +113,9 @@
                                             </td>
                                               <td>
                                                <div class="form-row">
-						<select name="fk_pessoa">
-                                                    <option class="own"  disabled="disabled" selected="selected">Selecione uma pessoa</option>
+						<select name="fk_nacionalidade ">
+                                                    <option class="own"  disabled="disabled" selected="selected">Categoria </option>
+                                                    
                                                    
 						</select>
 						<span class="select-btn">
@@ -132,9 +133,9 @@
                                               
                             </table>
                                                   
-                                                <div class="form-row-last" >
+                                           <div class="form-row-last" >
                                                     <input type="submit" name="register" class="register" value="Cadastrar Socio "
-                                                           style="background: red; margin-top: 220px; margin-left: -530px; width: 220px; ">
+                                                     style="background: #3498db; margin-top: 220px; margin-left: -530px; width: 220px; ">
 					     </div>
                                                 
                                                
