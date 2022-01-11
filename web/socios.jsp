@@ -20,6 +20,7 @@
 
     <link rel="stylesheet" href="_css/index.css" />
     <link rel="stylesheet" href="_css/Form_cadastro.css"/>
+      <link rel="stylesheet" href="_css/pessoa.css"/>
     
     <!-- Vamos adicionar um awesome basico  do cdn do texto-->
     <title>Administrador</title>
@@ -103,7 +104,7 @@
                                         <td><%= socio.getData_inicio() %> </td>
                                        
                                         <td>
-                                         <a class="icon1" > <img  src="_assets/editar.png"  class="icon" style="width: 20px; height: 20px;" alt="Error while was loading"> </a> 
+                                         <a class="icon1"> <img  src="_assets/editar.png"  class="icon" style="width: 20px; height: 20px;" alt="Error while was loading"> </a> 
                                         </td>
                                         <td> 
                                             <a class="icon2"> <img src="_assets/eliminar.png" alt="Error While was loading" style="width: 20px; height: 20px;"> </a> 
