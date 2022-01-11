@@ -25,7 +25,7 @@ public class SocioDAO
     
     
     
-    public static boolean cadastrarSocio(int fk_pessoa, int id_categoria_socio)
+    public static boolean cadastrarSocio(int fk_pessoa, int fk_categoria_socio)
     {
       String inserir = "INSERT INTO socio VALUES (default,?,?)";
       
@@ -34,7 +34,7 @@ public class SocioDAO
           Connection con = Conexao.abrirConexao();
           PreparedStatement ps = con.prepareStatement(inserir);
           ps.setInt(1, fk_pessoa);
-          ps.setInt(2, id_categoria_socio);
+          ps.setInt(2, fk_categoria_socio);
           ps.execute();
           ps.close();
           return true;
@@ -70,6 +70,7 @@ public class SocioDAO
                 socioModelo.setPrimeiro_nome(rs.getString(2));
                 socioModelo.setUltimo_nome(rs.getString(3));
                 socioModelo.setData_inicio(rs.getString(4));
+                socioModelo.setCategoria_desc(rs.getString(5));
                 lista_socios.add(socioModelo);
             }
         }

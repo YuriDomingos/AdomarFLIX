@@ -101,6 +101,7 @@
                                         <td><%=socio.getPk_socio()  %> </td>
                                         <td><%=socio.getPrimeiro_nome() %> </td>
                                         <td><%= socio.getUltimo_nome()%> </td>
+                                        <td><%= socio.getCategoria_desc() %> </td>
                                         <td><%= socio.getData_inicio() %> </td>
                                        
                                         <td>

@@ -12,16 +12,17 @@ package ucan.modelo;
 public class SocioModelo
 {
     private int pk_socio;
-    private String Primeiro_nome, ultimo_nome;
+    private String Primeiro_nome, ultimo_nome, categoria_desc;
     private String data_inicio;
 
     public SocioModelo() {
     }
 
-    public SocioModelo(int pk_socio, String Primeiro_nome, String ultimo_nome, String data_inicio) {
+    public SocioModelo(int pk_socio, String Primeiro_nome, String ultimo_nome, String categoria_desc, String data_inicio) {
         this.pk_socio = pk_socio;
         this.Primeiro_nome = Primeiro_nome;
         this.ultimo_nome = ultimo_nome;
+        this.categoria_desc = categoria_desc;
         this.data_inicio = data_inicio;
     }
 
@@ -49,6 +50,14 @@ public class SocioModelo
         this.ultimo_nome = ultimo_nome;
     }
 
+    public String getCategoria_desc() {
+        return categoria_desc;
+    }
+
+    public void setCategoria_desc(String categoria_desc) {
+        this.categoria_desc = categoria_desc;
+    }
+
     public String getData_inicio() {
         return data_inicio;
     }
@@ -57,6 +66,5 @@ public class SocioModelo
         this.data_inicio = data_inicio;
     }
 
-    
     
 }
