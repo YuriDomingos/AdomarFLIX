@@ -68,7 +68,7 @@
                                         <tr>
                                             <td>
                                                <div class="form-row">
-						<select name="fk_pessoa">
+						<select name="fk_socio">
                                                     <option class="own"  disabled="disabled" selected="selected">Selecione o Sócio</option>
                                                     <%
                                                         SocioDAO listaSocio = new SocioDAO();
@@ -90,7 +90,7 @@
                                             </td>
                                               <td>
                                                <div class="form-row">
-						<select name="fk_categoria">
+						<select name="fk_filme">
                                                     <option   disabled="disabled" selected="selected"> Selecione o filme  </option>
                                                     
                                                     <%
@@ -123,7 +123,7 @@
                                                   <p style=" font-size: 16px;
                                                               margin-left: 40px;
                                                               color : gray;"> Data Aluguer </p>
-                                                  <input class="input--style-2 js-datepicker" type="date" required="true" name="DEntrega" placeholder="Data de nascimento" name="birthday">
+                                                  <input class="input--style-2 js-datepicker" type="date" required="true" name="DEntrega">
                                                    
                                                </div>
                                             </td>
@@ -134,7 +134,7 @@
                                                   <p style=" font-size: 16px;
                                                               margin-left: 40px;
                                                               color : gray;"> Data Devolução  </p>
-                                                  <input class="input--style-2 js-datepicker" type="date" required="true" name="DataDevolucao" placeholder="Data de nascimento" name="birthday">
+                                                  <input class="input--style-2 js-datepicker" type="date" required="true" name="DataDevolucao">
                                                    
                                                </div>
                                             </td>
