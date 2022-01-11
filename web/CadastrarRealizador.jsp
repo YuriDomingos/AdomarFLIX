@@ -88,7 +88,7 @@
 					
 				
 					<div class="form-row">
-						<select name="pais">
+						<select name="fk_pessoa">
                                                     <option class="own"  disabled="disabled" selected="selected">Selecione uma pessoa</option>
                                                     <%
                                                         PessoaDAO pessoaDAO = new PessoaDAO();

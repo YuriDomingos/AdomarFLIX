@@ -68,7 +68,8 @@ public class RealizadorDAO {
                 RealizadorModelo realizador = new RealizadorModelo();
                 realizador.setPk_Realizador(rs.getInt(1));
                 realizador.setPrimeiro_nome(rs.getString(2));
-                realizador.setUltimo_nome(rs.getString(3));         
+                realizador.setUltimo_nome(rs.getString(3));  
+                realizador.setData_inico(rs.getString(4));
                 listaRealizador.add(realizador);
             }
         }

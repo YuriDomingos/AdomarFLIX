@@ -90,7 +90,7 @@
                                 
                                 <%
                                     RealizadorDAO listaRealizadores = new RealizadorDAO();
-                                    List<RealizadorModelo> listaReal = listaRealizadores.listaRealizadores();
+                                    List<RealizadorModelo> listaReal = listaRealizadores.listaRealizadoresComNome();
                                     for (RealizadorModelo realizaor : listaReal)
                                     {
                                         
