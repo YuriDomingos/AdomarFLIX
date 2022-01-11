@@ -115,7 +115,7 @@
                                             </td>
                                               <td>
                                                <div class="form-row">
-						<select name="fk_nacionalidade ">
+						<select name="fk_categoria ">
                                                     <option class="own"  disabled="disabled" selected="selected"> Selecione a categoria </option>
                                                     
                                                     <%
@@ -148,8 +148,14 @@
                             </table>
                                                   
                                            <div class="form-row-last" >
-                                                    <input type="submit" name="register" class="register" value="Cadastrar Socio "
-                                                     style="background: #3498db; margin-top: 220px; margin-left: -530px; width: 220px; ">
+                                                    <input type="submit" name="register" class="register" value="Cadastrar "
+                                                     style="background: #3498db;
+                                                            color:white;
+                                                            font-weight: bold; 
+                                                            margin-top: 205px;
+                                                            margin-left: -540px; 
+                                                            width: 220px; 
+                                                            border: none">
 					     </div>
                                                 
                                                

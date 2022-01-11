@@ -25,15 +25,16 @@ public class SocioDAO
     
     
     
-    public static boolean cadastrarSocio(int fk_pessoa)
+    public static boolean cadastrarSocio(int fk_pessoa, int id_categoria_socio)
     {
-      String inserir = "INSERT INTO socio VALUES (default,?)";
+      String inserir = "INSERT INTO socio VALUES (default,?,?)";
       
       try
       {
           Connection con = Conexao.abrirConexao();
           PreparedStatement ps = con.prepareStatement(inserir);
           ps.setInt(1, fk_pessoa);
+          ps.setInt(2, id_categoria_socio);
           ps.execute();
           ps.close();
           return true;

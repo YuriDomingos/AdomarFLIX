@@ -48,7 +48,7 @@ public class CadastrarSocio extends HttpServlet {
         
          // A ideia é usar menor possível de código 
          
-        SocioDAO.cadastrarSocio(Integer.parseInt(request.getParameter("fk_pessoa")));  
+        SocioDAO.cadastrarSocio(Integer.parseInt(request.getParameter("fk_pessoa")), Integer.parseInt(request.getParameter("fk_categoria")));  
         request.getRequestDispatcher("socios.jsp").forward(request, response);
         
         
