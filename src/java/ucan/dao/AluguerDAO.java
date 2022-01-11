@@ -23,17 +23,25 @@ public class AluguerDAO
 {
 
     
-    public boolean cadastrarAluguer(AluguerModelo aluguerModelo)
+    public static boolean cadastrarAluguer(AluguerModelo aluguerModelo)
     {
         
-        String insert = "INSERT INTO public.aluguer_filme(\n" +  "pk_aluguer_filme, data_aluguer, data_devolucao, fk_filme, fk_socio)\n" + "VALUES (?, ?, ?, ?, ?);";
+        String insert = "INSERT INTO public.aluguer_filme(\n" +  " data_aluguer, data_devolucao, fk_filme, fk_socio)\n" + "VALUES ( ?, ?, ?, ?);";
         
         try
         {
             Connection con = Conexao.abrirConexao();
+            
             PreparedStatement ps = con.prepareStatement(insert);
+            ps.setDate(1, aluguerModelo.getData_aluguer());
+            ps.setDate(2, aluguerModelo.getData_devolucao());
+            ps.setInt(3, aluguerModelo.getFk_filme());
+            ps.setInt(4, aluguerModelo.getFk_socio());
+           
+            ps.execute();
             
-            
+           return true;
+           
         }
         catch(SQLException ex)
         {

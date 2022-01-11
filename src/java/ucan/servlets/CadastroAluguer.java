@@ -12,6 +12,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import ucan.dao.AluguerDAO;
+import ucan.modelo.AluguerModelo;
+import ucan.utils.TratamentoDeDatas;
 
 /**
  *
@@ -37,7 +40,17 @@ public class CadastroAluguer extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException        
     {
         
+        
 
+         AluguerModelo aluguer = new AluguerModelo();
+         
+         aluguer.setData_aluguer(TratamentoDeDatas.converterDataNormalParaDataSQL(request.getParameter("").trim()));
+         aluguer.setData_devolucao(TratamentoDeDatas.converterDataNormalParaDataSQL(request.getParameter("").trim()));
+         aluguer.setFk_filme(Integer.parseInt(request.getParameter("").trim()));
+         aluguer.setFk_socio(Integer.parseInt(request.getParameter("").trim()));
+   
+         AluguerDAO.cadastrarAluguer(aluguer);
+         
          request.getRequestDispatcher("Aluguers.jsp").forward(request, response);
     }
 
