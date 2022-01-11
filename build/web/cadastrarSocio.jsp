@@ -134,7 +134,7 @@
                                                   
                                                 <div class="form-row-last" >
                                                     <input type="submit" name="register" class="register" value="Cadastrar Socio "
-                                                           style="background: red; margin-top: 220px; margin-left: 130px; ">
+                                                           style="background: red; margin-top: 220px; margin-left: -530px; width: 220px; ">
 					     </div>
                                                 
                                                
