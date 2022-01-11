@@ -48,6 +48,9 @@ public class SocioDAO
         
     }
     
+
+    
+    
     public ArrayList<SocioModelo> listar_socio()
     {
         
