@@ -77,7 +77,7 @@
                     <div class="primer-card">
                         <div class="primer-card-header">
                             <h3> Filmes  Cadastrados  </h3>
-                            <button onclick="window.location.href='CadastrarFilme.jsp'"> Novo filme  <span class="las la-arrow-right"></span> </button>
+                            <button onclick="window.location.href='CadastrarFime.jsp'"> Novo filme  <span class="las la-arrow-right"></span> </button>
                          
                         </div>
                         <div class="primer-card-body">
