@@ -68,7 +68,7 @@
                     <div class="primer-card">
                         <div class="primer-card-header">
                             <h3> Lista de empréstimos </h3>
-                            <button onclick="window.location.href='CadastrarPessoa.jsp'"> Novo emprestimo  <span class="las la-arrow-right"></span> </button>
+                            <button onclick="window.location.href=''"> Novo emprestimo  <span class="las la-arrow-right"></span> </button>
                          
                         </div>
                         <div class="primer-card-body">
