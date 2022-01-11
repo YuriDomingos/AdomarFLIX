@@ -38,7 +38,7 @@ public class CadastroAluguer extends HttpServlet {
     {
         
 
-             
+         request.getRequestDispatcher("Aluguers.jsp").forward(request, response);
     }
 
    
