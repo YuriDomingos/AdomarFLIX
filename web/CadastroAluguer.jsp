@@ -27,8 +27,7 @@
     <link rel="stylesheet" href="_css/index.css" />
     <link rel="stylesheet" href="_css/cadastrarPessoa.css"/>
     <link rel="stylesheet" href="_css/Form_cadastro.css"/>
-    <link rel="stylesheet" type="text/css" href="_css/montserrat-font.css">
-    <link rel="stylesheet" type="text/css" href="_css/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    
     
 
     
@@ -115,6 +114,31 @@
                                             </td>
                                             
                                         </tr>
+                                        
+                                        <tr>
+                                            
+                                            <td>
+                                                
+                                              <div class="input-group">
+                                                  <p style=" font-size: 16px;
+                                                              margin-left: 40px;
+                                                              color : gray;"> Data Aluguer </p>
+                                                  <input class="input--style-2 js-datepicker" type="date" required="true" name="Dnascimento" placeholder="Data de nascimento" name="birthday">
+                                                   
+                                               </div>
+                                            </td>
+                                            
+                                             <td>
+                                                
+                                              <div class="input-group">
+                                                  <p style=" font-size: 16px;
+                                                              margin-left: 40px;
+                                                              color : gray;"> Data Devolução  </p>
+                                                  <input class="input--style-2 js-datepicker" type="date" required="true" name="Dnascimento" placeholder="Data de nascimento" name="birthday">
+                                                   
+                                               </div>
+                                            </td>
+                                        </tr>
 					
                                                 
 		
@@ -128,14 +152,11 @@
                                                      style="background: #3498db;
                                                             color:white;
                                                             font-weight: bold; 
-                                                            margin-top: 205px;
-                                                            margin-left: -540px; 
+                                                            margin-top: 235px;
+                                                            margin-left: -470px; 
                                                             width: 220px; 
                                                             border: none">
-					     </div>
-                                                
-                                               
-				
+					     </div>  
 			</form>
 		</div>
 	</div>
@@ -143,9 +164,7 @@
   </main> 
                                      
  </div>            
-     
-    
-    
-                                
+                                   
     </body>
 </html>
+
