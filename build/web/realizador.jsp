@@ -100,8 +100,8 @@
                                 <tbody>
                                     <tr>
                                         <td><%=realizaor.getPk_Realizador() %> </td>
-                                        <td><%=realizaor.getFk_pessoa() %> </td>
-                                        <td><%= realizaor.getFk_nacionalidade() %> </td>
+                                        <td><%=realizaor.getPrimeiro_nome() %> </td>
+                                        <td><%= realizaor.getUltimo_nome() %> </td>
                                         <td><%= realizaor.getData_inico() %> </td>
                                        
                                         <td>

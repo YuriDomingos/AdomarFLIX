@@ -50,9 +50,9 @@ public class RealizadorDAO {
     
      public ArrayList<RealizadorModelo> listaRealizadoresComNome()
     {
-         String query = "SELECT r.pk_realizador, p.primeiro_nome, p.ultimo_nome FROM pessoa p "
-                                                                        + "INNER JOIN realizador r "
-                                                                        + "ON ( r.fk_pessoa = p.pk_pessoa);";
+         String query = "SELECT r.pk_realizador, p.primeiro_nome, p.ultimo_nome, date(r.data_inicio)  FROM pessoa p \n" +
+"                                                                        INNER JOIN realizador r \n" +
+"                                                                        ON ( r.fk_pessoa = p.pk_pessoa);";
          
          
         ArrayList<RealizadorModelo> listaRealizador = new ArrayList<>();
