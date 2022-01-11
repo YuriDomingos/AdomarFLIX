@@ -16,13 +16,13 @@ import java.sql.Timestamp;
 public class FilmeModelo 
 {
     private int pk_filme,fk_genero,fk_classificacao,fk_realizador;
-    private String titulo_portugues,titulo_original,Sinopse, classificacao, nome_realizador , genero;
+    private String titulo_portugues,titulo_original,Sinopse, classificacao, nome_realizador , genero, fn,ln;
     private String duracao, url_imagem;
 
     public FilmeModelo() {
     }
 
-    public FilmeModelo(int pk_filme, int fk_genero, int fk_classificacao, int fk_realizador, String titulo_portugues, String titulo_original, String Sinopse, String classificacao, String nome_realizador, String genero, String duracao, String url_imagem) {
+    public FilmeModelo(int pk_filme, int fk_genero, int fk_classificacao, int fk_realizador, String titulo_portugues, String titulo_original, String Sinopse, String classificacao, String nome_realizador, String genero, String fn, String ln, String duracao, String url_imagem) {
         this.pk_filme = pk_filme;
         this.fk_genero = fk_genero;
         this.fk_classificacao = fk_classificacao;
@@ -33,6 +33,8 @@ public class FilmeModelo
         this.classificacao = classificacao;
         this.nome_realizador = nome_realizador;
         this.genero = genero;
+        this.fn = fn;
+        this.ln = ln;
         this.duracao = duracao;
         this.url_imagem = url_imagem;
     }
@@ -117,6 +119,22 @@ public class FilmeModelo
         this.genero = genero;
     }
 
+    public String getFn() {
+        return fn;
+    }
+
+    public void setFn(String fn) {
+        this.fn = fn;
+    }
+
+    public String getLn() {
+        return ln;
+    }
+
+    public void setLn(String ln) {
+        this.ln = ln;
+    }
+
     public String getDuracao() {
         return duracao;
     }
@@ -133,6 +151,5 @@ public class FilmeModelo
         this.url_imagem = url_imagem;
     }
 
-  
     
 }

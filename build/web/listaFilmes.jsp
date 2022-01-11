@@ -76,8 +76,8 @@
                 <div class="projects">
                     <div class="primer-card">
                         <div class="primer-card-header">
-                            <h3> Socios Cadastrados  </h3>
-                            <button onclick="window.location.href='cadastrarSocio.jsp'"> Novo Socio <span class="las la-arrow-right"></span> </button>
+                            <h3> Filmes  Cadastrados  </h3>
+                            <button onclick="window.location.href='CadastrarFilme.jsp'"> Novo filme  <span class="las la-arrow-right"></span> </button>
                          
                         </div>
                         <div class="primer-card-body">
@@ -100,7 +100,7 @@
                                 
                                 <%
                                      FilmeDAO filmeDAO = new FilmeDAO();
-                                     List<FilmeModelo> listaF = filmeDAO.listarFilmes();
+                                     List<FilmeModelo> listaF = filmeDAO.listagem_principal();
                                      for(FilmeModelo filme : listaF)
                                      {
                                  %>
@@ -114,6 +114,7 @@
                                         <td><%= filme.getSinopse() %> </td>
                                         <td><%= filme.getGenero() %> </td>
                                         <td><%= filme.getClassificacao() %> </td>
+                                        <td><%= filme.getFn()+ " " + filme.getLn() %> </td>
                                         <td><%= filme.getDuracao()%> </td>
                                         <td><img src="_assets/filmes/<%=filme.getUrl_imagem() %>"/> </td>
                                         

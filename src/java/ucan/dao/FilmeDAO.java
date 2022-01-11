@@ -57,14 +57,15 @@ public class FilmeDAO
     {
         
         ArrayList<FilmeModelo> lista_tmp = new ArrayList<>();
+        
         String query = "SELECT f.pk_filme, f.titulo_portugues, f.titulo_original, \"Sinopse\", g.descricao, c.descricao, p.primeiro_nome, "
                 + "                                                                            p.ultimo_nome, f.duracao, f.url_imagem\n" +
                                       "FROM public.filme f "
                 
-                                    +" INNER JOIN genero_filme g ON (g.pk_genero = f.fk_genero)\n" +
-                                      "INNER JOIN classificao_filme c ON ( f.fk_classificacao = c.pk_classificacao) \n" +
-                                      "INNER JOIN realizador r ON (r.pk_realizador = f.fk_realizador)\n" +
-                                      "INNER JOIN pessoa p ON ( p.pk_pessoa = r.fk_pessoa);";
+                                    +" INNER JOIN genero_filme g       ON (g.pk_genero = f.fk_genero)\n" +
+                                      "INNER JOIN classificao_filme c  ON ( f.fk_classificacao = c.pk_classificacao) \n" +
+                                      "INNER JOIN realizador r         ON (r.pk_realizador = f.fk_realizador)\n" +
+                                      "INNER JOIN pessoa p             ON ( p.pk_pessoa = r.fk_pessoa);";
         
         try
         {
@@ -74,6 +75,21 @@ public class FilmeDAO
             
             while ( rs.next())
             {
+                FilmeModelo filmeModelo = new FilmeModelo();
+                
+                filmeModelo.setPk_filme(rs.getInt(1));
+                filmeModelo.setTitulo_portugues(rs.getString(2));
+                filmeModelo.setTitulo_original(rs.getString(3));
+                filmeModelo.setSinopse(rs.getString(4));
+                filmeModelo.setGenero(rs.getString(5));
+                filmeModelo.setClassificacao(rs.getString(6));
+                filmeModelo.setFn(rs.getString(7));
+                filmeModelo.setLn(rs.getString(8));
+                filmeModelo.setDuracao(rs.getString(9));
+                filmeModelo.setUrl_imagem(rs.getString(10));
+                
+                lista_tmp.add(filmeModelo);
+                
                 
             }
         }
