@@ -109,7 +109,7 @@ public class FilmeDAO
         String query = "SELECT titulo_portugues, g.descricao, c.descricao, duracao\n" +
                               "FROM public.filme INNER JOIN genero_filme g ON ( g.pk_genero = filme.fk_genero) \n" +
                               "INNER JOIN classificao_filme c ON (c.pk_classificacao = filme.fk_classificacao) \n" +
-                              " ORDER BY pk_filme desc limit 3;";
+                              " ORDER BY pk_filme desc limit 6;";
         
         try
         {

@@ -110,6 +110,7 @@ and open the template in the editor.
                                         <td> Titulo do filme </td>
                                         <td> Categoria</td>
                                         <td> Classificação</td>
+                                        <td> Duração</td>
                                     </tr>
                                 </thead>
                                 
@@ -130,12 +131,13 @@ and open the template in the editor.
                                         <td> <%=filmeM.getClassificacao() %> </td>
                                         <td> <%=filmeM.getDuracao() %> </td>
                                         
-                                        <td>
-                                            <span class="status"> </span> Disponível
-                                        </td>
                                     </tr>
                                     
                                 </tbody>
+                                
+                                 <%}                             
+                                    
+                                %>
                             </table>
                         </div>
                     </div>
