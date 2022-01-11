@@ -58,7 +58,7 @@
                                       
             <div class="page-content">
 		<div class="form-v10-content">
-			<form class="form-detail" action="CadastrarSocio" method="post" id="myform">
+			<form class="form-detail" action="CadastroAluguer" method="post" id="myform">
 				
                             <table>
                                 
@@ -123,7 +123,7 @@
                                                   <p style=" font-size: 16px;
                                                               margin-left: 40px;
                                                               color : gray;"> Data Aluguer </p>
-                                                  <input class="input--style-2 js-datepicker" type="date" required="true" name="Dnascimento" placeholder="Data de nascimento" name="birthday">
+                                                  <input class="input--style-2 js-datepicker" type="date" required="true" name="DEntrega" placeholder="Data de nascimento" name="birthday">
                                                    
                                                </div>
                                             </td>
@@ -134,7 +134,7 @@
                                                   <p style=" font-size: 16px;
                                                               margin-left: 40px;
                                                               color : gray;"> Data Devolução  </p>
-                                                  <input class="input--style-2 js-datepicker" type="date" required="true" name="Dnascimento" placeholder="Data de nascimento" name="birthday">
+                                                  <input class="input--style-2 js-datepicker" type="date" required="true" name="DataDevolucao" placeholder="Data de nascimento" name="birthday">
                                                    
                                                </div>
                                             </td>
