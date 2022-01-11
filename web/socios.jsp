@@ -17,16 +17,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Icons font CSS-->
-    <link href="_assets/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="_assets/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
-    <!-- Vendor CSS-->
-    <link href="_assets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="_assets/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="_css/index.css" />
-    <link rel="stylesheet" href="_css/pessoa.css"/>
+    <link rel="stylesheet" href="_css/Form_cadastro.css"/>
     
     <!-- Vamos adicionar um awesome basico  do cdn do texto-->
     <title>Administrador</title>
@@ -88,6 +81,7 @@
                                         <td> Id Socio </td>
                                         <td> Primeiro Nome </td>
                                         <td> Ultimo Nome</td>
+                                        <td> Categoria do Sócio</td>
                                         <td> Data de inicio  </td>       
                                         
                                     </tr>
@@ -136,34 +130,7 @@
 
     </div>
             
-        
-     <!-- Jquery JS-->
-     <script src="_assets/vendor/jquery/jquery.min.js"></script>
-    <!-- Vendor JS-->
-    <script src="_assets/vendor/select2/select2.min.js"></script>
-    <script src="_assets/vendor//datepicker/moment.min.js"></script>
-    <script src="_assets/vendor//datepicker/daterangepicker.js"></script>
-
-    <!-- Main JS-->
-    <script src="_js/global.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     
-    <script>
-        
-        function salvou(){
-            swal({
-                  title: "Cadastrado com sucesso !",
-                  text: "Nova pessoa cadastrada!!",
-                   icon: "success",
-                   button: "Fechar!",
-                    onBeforeOpen: () => {
-                    Swal.showLoading()
-                },
-});
-        }
-   
-    </script>
-
 
 </body>
 </html>
