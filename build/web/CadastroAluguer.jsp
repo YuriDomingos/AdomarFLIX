@@ -4,6 +4,8 @@
     Author     : Yuri Domingos
 --%>
 
+<%@page import="ucan.modelo.FilmeModelo"%>
+<%@page import="ucan.dao.FilmeDAO"%>
 <%@page import="ucan.modelo.SocioModelo"%>
 <%@page import="ucan.dao.SocioDAO"%>
 <%@page import="ucan.modelo.SocioCategoriaModelo"%>
@@ -94,14 +96,15 @@
                                                     <option   disabled="disabled" selected="selected"> Selecione o filme  </option>
                                                     
                                                     <%
-                                                        SocioCategoriaDAO lista_tmp = new SocioCategoriaDAO();
-                                                        List<SocioCategoriaModelo> lista_socios = lista_tmp.listarCategoriaSocio();
-                                                        for ( SocioCategoriaModelo socio : lista_socios)
+                                                        FilmeDAO filmeDAO = new FilmeDAO();
+                                                        
+                                                        List<FilmeModelo> lista_filme = filmeDAO.listagem_principal();
+                                                        for ( FilmeModelo filme : lista_filme )
                                                         {
                                                         
                                                     %>
                                                     
-                                                    <option value=<%=socio.getPk_socio_categoria() %>> <%= socio.getDescricao() %>  </option>
+                                                    <option value=<%= filme.getPk_filme() %>> <%= filme.getTitulo_portugues() %>  </option>
                                                     <%}
                                                    
                                                      %>

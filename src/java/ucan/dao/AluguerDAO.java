@@ -26,7 +26,7 @@ public class AluguerDAO
     public static boolean cadastrarAluguer(AluguerModelo aluguerModelo)
     {
         
-        String insert = "INSERT INTO public.aluguer_filme(\n" +  " data_aluguer, data_devolucao, fk_filme, fk_socio)\n" + "VALUES ( ?, ?, ?, ?);";
+        String insert = "INSERT INTO public.aluguer_filme VALUES (DEFAULT, ?, ?, ?, ?);";
         
         try
         {
