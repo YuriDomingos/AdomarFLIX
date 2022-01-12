@@ -26,6 +26,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Icons font CSS-->
 
+   <link href="_assets/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="_assets/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="_assets/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="_css/index.css" />
     <link rel="stylesheet" href="_css/cadastrarPessoa.css"/>
     <link rel="stylesheet" href="_css/Form_cadastro.css"/>
@@ -122,13 +125,10 @@
                                             
                                             <td>
                                                 
-                                              <div class="input-group">
-                                                  <p style=" font-size: 16px;
-                                                              margin-left: 40px;
-                                                              color : gray;"> Data Aluguer </p>
-                                                  <input class="input--style-2 js-datepicker" type="date" required="true" name="DEntrega">
-                                                   
-                                               </div>
+                                                   <div class="input-group">
+                                                       <input class="input--style-2 js-datepicker" type="text" required="true" name="Dnascimento" placeholder="Data de nascimento" name="birthday">
+                                                       <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                                    </div>
                                             </td>
                                             
                                              <td>
@@ -166,7 +166,13 @@
 
   </main> 
                                      
- </div>            
+ </div>      
+                                                     
+                                                     
+                                                     
+    <script src="_assets/vendor/jquery/jquery.min.js"></script> 
+    <script src="_assets/vendor//datepicker/moment.min.js"></script>
+    <script src="_assets/vendor//datepicker/daterangepicker.js"></script>
                                    
     </body>
 </html>

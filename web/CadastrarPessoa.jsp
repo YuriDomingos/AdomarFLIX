@@ -25,7 +25,6 @@
      <!-- Icons font CSS-->
     <link href="_assets/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="_assets/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-
     <link href="_assets/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="_css/index.css" />
     <link rel="stylesheet" href="_css/cadastrarPessoa.css"/>

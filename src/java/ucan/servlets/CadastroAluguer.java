@@ -43,11 +43,9 @@ public class CadastroAluguer extends HttpServlet {
         
 
          AluguerModelo aluguer = new AluguerModelo();
-         
+ 
          aluguer.setData_aluguer(TratamentoDeDatas.converterDataNormalParaDataSQL(request.getParameter("DEntrega").trim()));
-         String recebe = request.getParameter("DataDevolucao");
-         System.out.println("A data "+recebe);
-         aluguer.setData_devolucao(TratamentoDeDatas.converterDataNormalParaDataSQL(request.getParameter("DataDevolucao")));
+         aluguer.setData_devolucao(TratamentoDeDatas.converterDataNormalParaDataSQL(request.getParameter("DataDevolucao").trim()));
         
          aluguer.setFk_filme(Integer.parseInt(request.getParameter("fk_filme").trim()));
          aluguer.setFk_socio(Integer.parseInt(request.getParameter("fk_socio").trim()));
