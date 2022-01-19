@@ -53,6 +53,7 @@
                         <div class="primer-card-header">
                             <h3> Actores Cadastrados  </h3>
                             <button onclick="window.location.href='cadastrarAtor.jsp'"> Novo Ator <span class="las la-arrow-right"></span> </button>
+                              <button onclick="window.location.href='FilmesAtor.jsp'">Filmes participados  <span class="las la-arrow-right"></span> </button>
                          
                         </div>
                         

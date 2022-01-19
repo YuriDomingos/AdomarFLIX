@@ -19,7 +19,19 @@ import java.util.logging.Logger;
  */
 public class TratamentoDeDatas 
 {
-       
+    
+ 
+    /*
+       Para pegar a data de nascimento de uma pessoa 
+    
+       SELECT *FROM PESSOA WHERE EXTRACT(YEAR FROM AGE(data_nasc)) BETWEEN 12 and 40
+    
+       Para pegar o tempo  de duracao do filme 
+    
+       SELECT SUBSTRING(duracao from '[0-3]+') from filme
+    
+    
+    */  
                   ;           
       public static Date converterDataNormalParaDataSQL(String dataFormatoNormal)
       {

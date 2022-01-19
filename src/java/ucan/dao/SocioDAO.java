@@ -56,7 +56,7 @@ public class SocioDAO
         
         ArrayList<SocioModelo> lista_socios = new ArrayList<SocioModelo>();
         
-        String query = "select p.pk_pessoa, p.primeiro_nome, p.ultimo_nome, date(s.data_inicio), cs.descricao \n" +
+        String query = "select s.pk_socio, p.primeiro_nome, p.ultimo_nome, date(s.data_inicio), cs.descricao \n" +
                                      " \n" +
                                      "  from pessoa p INNER JOIN socio s ON (p.pk_pessoa = s.fk_pessoa) \n" +
                                      "  INNER JOIN categoria_socio cs ON (cs.pk_categoria_socio = s.fk_categoria_socio )";
